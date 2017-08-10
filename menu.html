@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles1.css" rel="stylesheet" type="text/css">
+    <link href="css/video-js.css" rel="stylesheet">
+    <link href="css/video-styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/interactive-transcript.css" rel="stylesheet" type="text/css" />
+    <link href="css/videojs-resolution-switcher.css" rel="stylesheet">
+    <script src="js/scripts.js"></script>
+    <script src="http://p3.3playmedia.com/p3sdk.current.js"></script>
+    <!-- If you'd like to support IE8 -->
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="row">
+  <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-menubuilder">
+        <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learning Objectives
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#Obj1">Objective One</a></li>
+          <li><a href="#">Objective Two</a></li>
+          <li><a href="#">Objective Three</a></li>
+        </ul>
+      </li>
+            <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Videos
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+            <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interactivities
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+    </ul>
+            <ul class="pagination pagination-sm navbar-right" style="margin-right: 15px;">
+				<a href="#" id="arrowPrev" aria-label="Previous" onclick="prevBtn()"> <span aria-hidden="true">&laquo;</span> </a>
+              <li class="PageSwap"><a href="#" onClick="content1()">1</a></li>
+              <li class="PageSwap"><a href="#" onClick="content2()">2</a></li>
+              <li class="PageSwap"><a href="#" onClick="content3()">3</a></li>
+              <li class="PageSwap"><a href="#" onClick="content4()">4</a></li>
+              <li class="PageSwap"><a href="#" onClick="content5()">5</a></li>
+              <li class="PageSwap"><a href="#" onClick="content6()">6</a></li>
+              <li class="PageSwap"><a href="#" onClick="content7()">7</a></li>
+              <li class="PageSwap"><a href="#" onClick="content8()">8</a></li>
+              <li class="PageSwap"><a href="#" onClick="content9()">9</a></li>
+              <li class="PageSwap"><a href="#" onClick="content10()">10</a></li>
+			
+          <a href="#" id="arrowNext" aria-label="Next" onclick="nextBtn()"> <span aria-hidden="true">&raquo;</span> </a>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  var $listItems = $('.pagination li');
+
+$listItems.click(function(){
+$listItems.removeClass('active');
+$(this).addClass('active');  
+var activeLink=$(this);
+});
+
+ $('#arrowPrev').on('click',function(){
+var $activeLi=$('.pagination').find("li.active");
+$activeLi.removeClass('active');
+
+if($activeLi.prev().length>0 ){
+$activeLi.prev().addClass('active');  
+}else{
+$('.pagination').find("li:last").addClass("active")
+}
+});
+
+$('#arrowNext').on('click',function(){
+var $activeLi=$('.pagination').find("li.active");
+$activeLi.removeClass('active');
+
+if($activeLi.next().length>0){
+$activeLi.next().addClass('active');  
+ }else{
+$('.pagination').find("li:first").addClass("active")
+}
+});
+
+
+});
+	</script>
+
+<script>
+
+	
+	$(function(){
+    "use strict";
+    $('.PortSwap').hide().eq(0).addClass('active').show();
+		
+});
+	
+	$(function(){
+    "use strict";
+    $('.PageSwap').eq(0).addClass('active');
+		
+});
+
+
+function prevBtn(){
+    var current = $('.PortSwap.active'), prev = current.prev('.PortSwap');
+    console.log(prev.length, prev)
+    if(prev.length){
+        current.hide().removeClass('active');
+        prev.addClass('active').hide().fadeIn(250);
+    }
+}
+function nextBtn(){
+    var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+    if(next.length){
+        current.hide().removeClass('active');
+        next.addClass('active').hide().fadeIn(250);
+    }
+	
+
+	
+}
+
+function content1(){
+		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		 current.hide().removeClass('active');
+         $('#Content1').addClass('active').hide().fadeIn(250);
+	}
+	
+function content2(){
+		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		 current.hide().removeClass('active');
+         $('#Content2').addClass('active').hide().fadeIn(250);
+	}
+function content3(){
+		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		 current.hide().removeClass('active');
+         $('#Content3').addClass('active').hide().fadeIn(250);
+	}
+function content4(){
+		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		 current.hide().removeClass('active');
+         $('#Content4').addClass('active').hide().fadeIn(250);
+	}
+function content5(){
+		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		 current.hide().removeClass('active');
+         $('#Content5').addClass('active').hide().fadeIn(250);
+	}
+function content6(){
+		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		 current.hide().removeClass('active');
+         $('#Content6').addClass('active').hide().fadeIn(250);
+	}
+function content7(){
+		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		 current.hide().removeClass('active');
+         $('#Content7').addClass('active').hide().fadeIn(250);
+	}
+function content8(){
+		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		 current.hide().removeClass('active');
+         $('#Content8').addClass('active').hide().fadeIn(250);
+	}
+function content9(){
+		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		 current.hide().removeClass('active');
+         $('#Content9').addClass('active').hide().fadeIn(250);
+	}
+function content10(){
+		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		 current.hide().removeClass('active');
+         $('#Content10').addClass('active').hide().fadeIn(250);
+	
+	
+	}
+	
+
+</script>
+</body>
+</html>

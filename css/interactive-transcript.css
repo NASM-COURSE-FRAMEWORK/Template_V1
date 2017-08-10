@@ -1,0 +1,52 @@
+
+/*
+Interactive Transcript Styles
+*/
+
+.p3sdk-interactive-transcript-content{
+    width: 100%;
+    height: 180px;
+    overflow-y: auto;
+}
+
+.p3sdk-current-word {
+    background: #005089;
+    color: #fff;
+    border-radius: 2px;
+	text-decoration:underline;
+}
+
+.p3sdk-tracked-paragraph {
+    color: gray;
+}
+
+.p3sdk-interactive-transcript-searchbox {
+    width: 200px;
+}
+
+.p3sdk-interactive-transcript-search-hit {
+  background: #0c3b60;
+  color: white;
+}
+
+.p3sdk-interactive-transcript-progressbar {
+    display: block;
+    background: gray;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 1em;
+    margin: 0.25em;
+    cursor: pointer;
+    cursor: hand;
+	color:white;
+}
+
+.p3sdk-interactive-transcript-progress{
+    display: block;
+    float: left;
+    background: #005089;
+    width: 0%;
+    height: 1em;
+	color:white;
+}
+

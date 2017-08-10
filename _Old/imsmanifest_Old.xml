@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<manifest>
+  <organizations default="NASM_Template">
+    <organization identifier="NASM_template">
+      <title>Template</title>
+      <item identifier="item_1" identifierref="resource_1">
+        <title>Module 1</title>
+        <adlcp:masteryscore>0</adlcp:masteryscore>
+      </item>
+      <item identifier="item_2" identifierref="resource_2">
+        <title>Module 2</title>
+        <adlcp:masteryscore>0</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="resource_1" type="webcontent" adlcp:scormtype="sco" href="Template_V6.html">
+      <file href="SCORM_API_wrapper.js" />
+      <file href="css/bootstrap-3.3.6.css" />
+      <file href="css/styles.css" />
+      <file href="js/scripts.js" />
+      <file href="js/bootstrap.js" />
+      <file href="js/bootstrap-3.3.6.js" />
+      <file href="js/jquery.ui.touch-punch.min.js" />
+      <file href="js/jquery-1.11.3.minjs" />
+      <file href="js/jquery-ui.js" />
+    </resource>
+    <resource identifier="resource_2" type="webcontent" adlcp:scormtype="sco" href="Template_V6.html">
+      <file href="SCORM_API_wrapper.js" />
+      <file href="css/bootstrap-3.3.6.css" />
+      <file href="css/styles.css" />
+      <file href="js/scripts.js" />
+      <file href="js/bootstrap.js" />
+      <file href="js/bootstrap-3.3.6.js" />
+      <file href="js/jquery.ui.touch-punch.min.js" />
+      <file href="js/jquery-1.11.3.minjs" />
+      <file href="js/jquery-ui.js" />
+    </resource>
+  </resources>
+</manifest>

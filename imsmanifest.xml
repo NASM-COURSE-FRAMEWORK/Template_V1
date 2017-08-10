@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<manifest> 	
+
+<organizations default="TOC1"> 
+         <organization identifier="TOC1"> 
+            <title>CPT</title>
+            <item identifier="I_SCO0" identifierref="SCO0">
+            <title>CPT Interactivity</title>
+            <adlcp:masteryscore>0</adlcp:masteryscore>
+         </item>
+         </organization>
+      </organizations>
+      <resources>
+         <resource identifier="SCO0" type="webcontent" adlcp:scormtype="sco" href="Template_V6.html">
+            <file href="Template_V6.html"/>
+            <dependency identifierref="ALLRESOURCES" />
+         </resource> 
+         <resource identifier="ALLRESOURCES" type="webcontent" adlcp:scormtype="asset">
+            <file href="Template_V6.html" />
+            <file href="SCORM_API_wrapper.js" />
+			<file href="css/bootstrap-3.3.6.css" />
+			<file href="css/styles.css" />
+			<file href="img/client_a_1a_img1_200x200.jpg" />
+			<file href="img/client_a_1a_img2_200x200.jpg" />
+			<file href="img/client_a_1a_img3_200x200.jpg" />
+			<file href="img/client_a_1a_img4_200x200.jpg" />
+			<file href="img/client_a_1a_img5_200x400.jpg" />
+			<file href="img/client_a_1a_img6_200x400.jpg" />
+			<file href="img/client_a_1a_img7_400x444.jpg" />
+			<file href="img/client_a_1a_img8_400x444.jpg" />
+			<file href="img/client_a_1a_img9_400x444.jpg" />
+			<file href="img/client_a_1a_img9_837x520.jpg" />
+			<file href="img/client_a_1a_img10_800x350.jpg" />
+			<file href="img/client_a_333x500.jpg" />
+			<file href="js/scripts.js" />
+			<file href="js/bootstrap.js" />
+			<file href="js/bootstrap-3.3.6.js" />
+			<file href="js/jquery.ui.touch-punch.min.js" />
+			<file href="js/jquery-1.11.3.minjs" />
+			<file href="js/jquery-ui.js" />
+         </resource>
+      </resources>
+   </manifest>
