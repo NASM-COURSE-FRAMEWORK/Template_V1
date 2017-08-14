@@ -13,37 +13,13 @@
   <link href="css/video-styles.css" rel="stylesheet" type="text/css" />
   <link href="css/interactive-transcript.css" rel="stylesheet" type="text/css" />
   <link href="css/videojs-resolution-switcher.css" rel="stylesheet">
+  <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="http://p3.3playmedia.com/p3sdk.current.js"></script>
   <!-- If you'd like to support IE8 -->
 
   <script type="text/javascript" src="SCORM_API_wrapper.js"></script>
   <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-  <script src="js/jquery-1.11.3.min.js"></script>
-
-  <!-- Load Menu System-->
-<!--
-  <script> 
-    $(function(){
-      $("#menu").load("menu.html"); 
-		$("#footer").load("footer.html"); 
-    });
-		
-    </script>
--->
-    
-
-	  
-	  
-  <!-- SCORM Intitialization-->
-  <script type="text/javascript">
-	//Declare Scorm Variables
-	var scorm = pipwerks.SCORM;  //Shortcut
-	var lmsConnected = false;
-	window.onload = function (){
-	initCourse();
-	}
-  </script>
   </head>
   <body>
 
@@ -88,7 +64,7 @@
     </ul>
             <ul class="pagination pagination-sm navbar-right" style="margin-right: 15px;">
 				<a href="#" id="arrowPrev" aria-label="Previous" onclick="prevBtn()"> <span aria-hidden="true">&laquo;</span> </a>
-              <li class="PageSwap"><a href="#" onClick="content1()">1</a></li>
+              <li class="PageSwap"><a href="#" class="switcher" onClick="content1()">1</a></li>
               <li class="PageSwap"><a href="#" onClick="content2()">2</a></li>
               <li class="PageSwap"><a href="#" onClick="content3()">3</a></li>
               <li class="PageSwap"><a href="#" onClick="content4()">4</a></li>
@@ -98,7 +74,7 @@
               <li class="PageSwap"><a href="#" onClick="content8()">8</a></li>
               <li class="PageSwap"><a href="#" onClick="content9()">9</a></li>
               <li class="PageSwap"><a href="#" onClick="content10()">10</a></li>
-			
+
           <a href="#" id="arrowNext" aria-label="Next" onclick="nextBtn()"> <span aria-hidden="true">&raquo;</span> </a>
             </ul>
         </div>
@@ -107,15 +83,15 @@
   </div>
   </div>
   </div>
-<!-- Menu System--> 
+<!-- Menu System-->
 
 <!-- Main Body -->
 <div class="container-fluid" style="width:85%;">
 <!-- Content Section -->
-<div class ="PortSwap" id="Content1"> 
+<div class ="PortSwap" id="Content1">
     <!-- Add Padding to accomodate menu but hide in print-->
     <div class="row no-print" style="padding-top:45px;"></div>
-    <div class="row"> 
+    <div class="row">
     <!-- Top Header and Page Toolbar-->
     <div class="col-lg-9">
         <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 1</div>
@@ -138,17 +114,17 @@
             <div class="wrapper">
                 <div class="videocontent no-print">
                 <div class="p3sdk-container p3sdk-debug" player_id="video1" player_type="videojs">
-                    <video id="video1" class="video-js vjs-16-9 vjs-default-skin" controls preload="auto" width="640" height="264"  data-setup='{"fluid": true}'> 
+                    <video id="video1" class="video-js vjs-16-9 vjs-default-skin" controls preload="auto" width="640" height="264"  data-setup='{"fluid": true}'>
                     <!--Insert SD Video URL-->
                     <source src="http://production.smedia.lvp.llnw.net/c795395f130d4737be848be06f52ea62/bB/ccWC5ymezYF6CL4G2iqRVaYu5vTLjVE5y6MxVDsJo/nasm_cpt_cueing_1-1.mp4?x=0&h=9afcbf93f68867fb14c476d1b83a2693" type='video/mp4' label='480 SD' res='480' />
                     <!--Insert HD Video URL-->
                     <source src="http://production.smedia.lvp.llnw.net/c795395f130d4737be848be06f52ea62/bp/nUpBpRO5yib1oirJ3YkzSXXa_JKgFPvcOcA09dWNg/nasm_cpt_cueing_1-1.mp4?x=0&h=c171439f4d170f56dcbd1ceb7526d74f" type='video/mp4' label='720 HD' res='720'/>
-                    
+
                     <!--Insert Closed Captioning URL-->
                     <track label="English" kind="captions" srclang="en" src="/file.php/10190/_CC/NASM_CPT_Cueing_1.1.vtt"/>
                     <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
                   </video>
-                    <div class="transcript"> 
+                    <div class="transcript">
                     <!--Insert Closed Captioning File ID and Project ID-->
                     <div class="p3sdk-interactive-transcript" file_id="1206310" project_id="19164">
                         <button style="margin-bottom:15px; margin-top:15px;" class="p3sdk-interactive-transcript-toggle-keywords-button btn btn-primary"> Highlight Keyword </button>
@@ -184,19 +160,19 @@
     <div class="row">
     <div class="col-lg-12">
 		<div class="my-footer">Text
-       
+
       </div>
-       
+
       </div>
-      
+
       </div>
   </div>
-    <!-- Content Section --> 
     <!-- Content Section -->
-    <div class ="PortSwap" id="Content2"> 
+    <!-- Content Section -->
+    <div class ="PortSwap" id="Content2">
     <!-- Add Padding to accomodate menu but hide in print-->
     <div class="row no-print" style="padding-top:45px;"></div>
-    <div class="row"> 
+    <div class="row">
         <!-- Top Header and Page Toolbar-->
         <div class="col-lg-7">
         <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 2</div>
@@ -237,11 +213,11 @@
     <div class="row">
     <div class="col-lg-12">
 		<div class="my-footer">Text
-       
+
       </div>
-       
+
       </div>
-      
+
       </div>
   </div>
    <div class ="PortSwap" id="Content3">
@@ -254,8 +230,8 @@
           </div>
         </div>
       </div>
-      <div class="row"> 
-        <!--Row 2 Instructions--> 
+      <div class="row">
+        <!--Row 2 Instructions-->
       </div>
     </div>
   </div>
@@ -334,8 +310,8 @@
           </div>
         </div>
       </div>
-      <!-- Header Row --> 
-      <!-- Main Row --> 
+      <!-- Header Row -->
+      <!-- Main Row -->
     </div>
     <div class="col-lg-offset-0 col-sm-offset-0 col-md-offset-0 col-sm-12 col-lg-12 col-md-12 col-xs-offset-0 col-xs-12">
       <div class="row" style="margin-top:50px">
@@ -351,12 +327,12 @@
         </div>
       </div>
     </div>
-    
-    <!--  Interactivity JavaScript--> 
+
+    <!--  Interactivity JavaScript-->
     <script>
 	var numTries = 0;
 $( "#quiz###" ).click(function() {
-	numTries = numTries +1;	
+	numTries = numTries +1;
 	var a1 = document.getElementById("quiz###_1").value;
 	var a2 = document.getElementById("quiz###_2").value;
 	var a3 = document.getElementById("quiz###_3").value;
@@ -367,7 +343,7 @@ $( "#quiz###" ).click(function() {
 	var a8 = document.getElementById("quiz###_8").value;
 	var a9 = document.getElementById("quiz###_9").value;
 	var a10 = document.getElementById("quiz###_10").value;
-	
+
 	if (a1 == "A" && a2 == "A" && a3 == "B" && a4 == "A" && a5 == "B" && a6 == "C" && a7 == "B" && a8 == "C" && a9 == "C" && a10== "C") {
  		document.getElementById("rationale###").innerHTML = "That is <b>Correct!</b> Please continue.";
 		$("#rationale###").removeAttr( "style" ).hide().fadeIn(1000);
@@ -378,7 +354,7 @@ $( "#quiz###" ).click(function() {
 		} else {
 			document.getElementById("rationale###").innerHTML = "That is <b>Incorrect!</b> Please try again.";
 			$("#rationale###").removeAttr( "style" ).hide().fadeIn(500);
-			
+
 			if (a1 != "A") {document.getElementById("quiz###_1").value = "";}
 			if (a2 != "A") {document.getElementById("quiz###_2").value = "";}
 			if (a3 != "B") {document.getElementById("quiz###_3").value = "";}
@@ -395,159 +371,24 @@ $( "#quiz###" ).click(function() {
 			if (numTries == 3 || numTries == 7) {
 		document.getElementById("rationale###").innerHTML = "HINT: Correct answers will remain and all incorrect answers will be removed.";
 	}
-	
+
 });
-		
+
 		function caps(element){
     element.value = element.value.toUpperCase();
 }
-</script> 
-  </div> 
+</script>
+  </div>
 	</div>
-    
-    <!-- Content Section --> 
+
+    <!-- Content Section -->
     <!-- Footer -->
     <div id="footer"></div>
   </div>
-<!-- Main Body --> 
-<script>
-$(document).ready(function(){
-  var $listItems = $('.pagination li');
-
-$listItems.click(function(){
-$listItems.removeClass('active');
-$(this).addClass('active');  
-var activeLink=$(this);
-});
-
- $('#arrowPrev').on('click',function(){
-var $activeLi=$('.pagination').find("li.active");
-$activeLi.removeClass('active');
-
-if($activeLi.prev().length>0 ){
-$activeLi.prev().addClass('active');  
-}else{
-$('.pagination').find("li:last").addClass("active")
-}
-});
-
-$('#arrowNext').on('click',function(){
-var $activeLi=$('.pagination').find("li.active");
-$activeLi.removeClass('active');
-
-if($activeLi.next().length>0){
-$activeLi.next().addClass('active');  
- }else{
-$('.pagination').find("li:first").addClass("active")
-}
-});
-
-
-});
-	</script>
-
-<script>
-
-	
-	$(function(){
-    "use strict";
-    $('.PortSwap').hide().eq(0).addClass('active').show();
-		
-});
-	
-	$(function(){
-    "use strict";
-    $('.PageSwap').eq(0).addClass('active');
-		
-});
-
-
-function prevBtn(){
-    var current = $('.PortSwap.active'), prev = current.prev('.PortSwap');
-    console.log(prev.length, prev)
-    if(prev.length){
-        current.hide().removeClass('active');
-        prev.addClass('active').hide().fadeIn(250);
-    }
-}
-function nextBtn(){
-    var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-    if(next.length){
-        current.hide().removeClass('active');
-        next.addClass('active').hide().fadeIn(250);
-    }
-	
-
-	
-}
-
-function content1(){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-		 current.hide().removeClass('active');
-         $('#Content1').addClass('active').hide().fadeIn(250);
-	}
-	
-function content2(){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-		 current.hide().removeClass('active');
-         $('#Content2').addClass('active').hide().fadeIn(250);
-	}
-function content3(){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-		 current.hide().removeClass('active');
-         $('#Content3').addClass('active').hide().fadeIn(250);
-	}
-function content4(){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-		 current.hide().removeClass('active');
-         $('#Content4').addClass('active').hide().fadeIn(250);
-	}
-function content5(){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-		 current.hide().removeClass('active');
-         $('#Content5').addClass('active').hide().fadeIn(250);
-	}
-function content6(){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-		 current.hide().removeClass('active');
-         $('#Content6').addClass('active').hide().fadeIn(250);
-	}
-function content7(){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-		 current.hide().removeClass('active');
-         $('#Content7').addClass('active').hide().fadeIn(250);
-	}
-function content8(){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-		 current.hide().removeClass('active');
-         $('#Content8').addClass('active').hide().fadeIn(250);
-	}
-function content9(){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-		 current.hide().removeClass('active');
-         $('#Content9').addClass('active').hide().fadeIn(250);
-	}
-function content10(){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
-		 current.hide().removeClass('active');
-         $('#Content10').addClass('active').hide().fadeIn(250);
-	
-	
-	}
-	
-
-</script>
-<!-- Video Player JS --> 
-<script src="js/video.js"></script> 
-<script src="js/videojs-resolution-switcher.js"></script> 
-<script>
-    videojs('video1').videoJsResolutionSwitcher()
-  </script> 
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-1.11.3.min.js"></script> 
-
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<!-- Video Player JS -->
+<script src="js/video.js"></script>
+<script src="js/videojs-resolution-switcher.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
