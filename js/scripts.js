@@ -138,6 +138,8 @@ function prevNext(btn){
 						$('.pagination').find("li:first").addClass("active")
 				}
 		}
+		var $activeEl = $('.pagination').find("li.active");
+		swapContent($activeEl);
 }
 
 function swapContent(el){
