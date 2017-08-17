@@ -23,6 +23,12 @@ $(document).ready(function() {
 						console.log("Failed");
 				}
 		});
+		//load pagination based on number of content divs
+		var numContentBlocks = $('.PortSwap').length;
+		for(var i = 1; i <= numContentBlocks; i++){
+				$('#mainPagination').append('<li class="PageSwap'+((i==1)?' active':'')+'"><a href="#" id="page_'+i+'">'+i+'</a></li>');
+		}
+
 		$('.prevNextBtn').click(function(){ prevNext($(this)); });
 		$('.PageSwap').click(function(){ prevNext($(this)); });
 		//SCORM Intitialization
