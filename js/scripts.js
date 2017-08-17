@@ -24,7 +24,7 @@ $(document).ready(function() {
 				}
 		});
 		$('.prevNextBtn').click(function(){ prevNext($(this)); });
-		$('.PageSwap').click(function(){ swapContent($(this)); });
+		$('.PageSwap').click(function(){ prevNext($(this)); });
 		//SCORM Intitialization
 		//Declare Scorm Variables
 		var scorm = pipwerks.SCORM;  //Shortcut
@@ -110,41 +110,44 @@ $(function(){
 });
 
 function prevNext(btn){
+		//check to see if the click is one to a pagination element or prev/next
+		var navClickType = btn.prop('nodeName');
+		//remove the active class from the currently active pagination element
 		var $activeLi = $('.pagination').find("li.active");
 		$activeLi.removeClass('active');
-		var theID = btn.attr('id');
-		var current = $('.PortSwap.active');
-		var prev = null, next = null;
-		if(theID.split('arrow')[1] == 'Prev'){
-				prev = current.prev('.PortSwap');
-				if(prev.length){
-						current.hide().removeClass('active');
-						prev.addClass('active').hide().fadeIn(250);
-				}
-				if($activeLi.prev().length>0 ){
-						$activeLi.prev().addClass('active');
-				} else {
-						$('.pagination').find("li:last").addClass("active")
-				}
-		} else if(theID.split('arrow')[1] == 'Next'){
-				next = current.next('.PortSwap');
-				if(next.length){
-						current.hide().removeClass('active');
-						next.addClass('active').hide().fadeIn(250);
-				}
-				if($activeLi.next().length>0){
-						$activeLi.next().addClass('active');
-				} else {
-						$('.pagination').find("li:first").addClass("active")
-				}
-		}
-		var $activeEl = $('.pagination').find("li.active");
-		swapContent($activeEl);
-}
 
-function swapContent(el){
-		var current = $('.PortSwap.active'), next = current.next('.PortSwap');
+		var current = $('.PortSwap.active')
+		var next = current.next('.PortSwap');
+		var prev = current.prev('.PortSwap');
 		current.hide().removeClass('active');
-		var contentID = '#Content' + el.find('a').attr('id').split('_')[1];
-		$(contentID).addClass('active').hide().fadeIn(250);
+		if(navClickType == 'A'){ //actions if prev/next is clicked
+				var theID = btn.attr('id');
+				var direction = theID.split('arrow')[1];
+				if(direction == 'Prev'){
+						if(prev.length){
+								current.hide().removeClass('active');
+								prev.addClass('active').hide().fadeIn(250);
+						}
+						if($activeLi.prev().length>0 ){
+								$activeLi.prev().addClass('active');
+						} else {
+								$('.pagination').find("li:last").addClass("active");
+						}
+				} else if(direction == 'Next'){
+						if(next.length){
+								current.hide().removeClass('active');
+								next.addClass('active').hide().fadeIn(250);
+						}
+						if($activeLi.next().length>0){
+								$activeLi.next().addClass('active');
+						} else {
+								$('.pagination').find("li:first").addClass("active");
+						}
+				}
+		} else { //actions if pagination element is clicked
+				btn.addClass('active');
+				$activeEl = $('.pagination').find("li.active");
+				var contentID = '#Content' + $activeEl.find('a').attr('id').split('_')[1];
+				$(contentID).addClass('active').hide().fadeIn(250);
+		}
 }

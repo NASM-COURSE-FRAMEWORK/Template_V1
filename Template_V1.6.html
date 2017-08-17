@@ -25,64 +25,72 @@
 
 <!-- Menu System-->
 <div class="container-fluid" style="width:95%">
-    <div class="row">
-  <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
-        </div>
-        <div class="collapse navbar-collapse navbar-menubuilder">
-        <ul class="nav navbar-nav">
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learning Objectives
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#Obj1">Objective One</a></li>
-          <li><a href="#">Objective Two</a></li>
-          <li><a href="#">Objective Three</a></li>
-        </ul>
-      </li>
-            <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Videos
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul>
-      </li>
-            <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interactivities
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul>
-      </li>
-    </ul>
-            <ul class="pagination pagination-sm navbar-right" style="margin-right: 15px;">
-				<a id="arrowPrev" class="prevNextBtn" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a>
-              <li class="PageSwap active"><a href="#" id="page_1">1</a></li>
-              <li class="PageSwap"><a href="#" id="page_2">2</a></li>
-              <li class="PageSwap"><a href="#" id="page_3">3</a></li>
-              <li class="PageSwap"><a href="#" id="page_4">4</a></li>
-              <li class="PageSwap"><a href="#" id="page_5">5</a></li>
-              <li class="PageSwap"><a href="#" id="page_6">6</a></li>
-              <li class="PageSwap"><a href="#" id="page_7">7</a></li>
-              <li class="PageSwap"><a href="#" id="page_8">8</a></li>
-              <li class="PageSwap"><a href="#" id="page_9">9</a></li>
-              <li class="PageSwap"><a href="#" id="page_10">10</a></li>
-
-          <a id="arrowNext" class="prevNextBtn" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a>
+  <div class="row">
+    <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+          </div>
+          <div class="collapse navbar-collapse navbar-menubuilder">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learning Objectives
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#Obj1">Objective One</a></li>
+                  <li><a href="#">Objective Two</a></li>
+                  <li><a href="#">Objective Three</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Videos
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interactivities
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                </ul>
+              </li>
             </ul>
+            <style>
+              .pagBlock { margin-right:15px; }
+              .pagCol { display:inline-block;margin-right:-4px;vertical-align:middle;min-height:30px; }
+              .pagCol a, .pagCol a span { font-size:18px; text-decoration:none; cursor:pointer; }
+              .pagColMain { margin:0 7px 0 10px; }
+              .PortSwap { display:none; }
+              .active { display:block; }
+            </style>
+            <div class="pagBlock navbar-right">
+              <div class="pagCol">
+                <a id="arrowPrev" class="prevNextBtn" aria-label="Previous"> <span aria-hidden="true"><<</span> </a>
+              </div>
+              <div class="pagCol pagColMain">
+                <ul class="pagination pagination-sm">
+                  <li class="PageSwap active"><a href="#" id="page_1">1</a></li>
+                  <li class="PageSwap"><a href="#" id="page_2">2</a></li>
+                  <li class="PageSwap"><a href="#" id="page_3">3</a></li>
+                </ul>
+              </div>
+              <div class="pagCol">
+                <a id="arrowNext" class="prevNextBtn" aria-label="Next"> <span aria-hidden="true">>></span> </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-  </div>
+</div>
 <!-- Menu System-->
 
 <!-- Main Body -->
