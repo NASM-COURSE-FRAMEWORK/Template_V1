@@ -33,7 +33,7 @@ $(document).ready(function() {
 		for(var i = 1; i <= numContentBlocks; i++){
 				$('#mainPagination').append('<li class="PageSwap'+((i==1)?' active':'')+'"><a href="#" id="page_'+i+'">'+i+'</a></li>');
 		}
-
+		//listen for pagination clicks
 		$('.prevNextBtn').click(function(){
 			//Run Progress Bar Update.  Must only run once per Content Page
 			runProgressBar();
@@ -411,15 +411,16 @@ $(function(){
 function prevNext(btn){
 		//check to see if the click is one to a pagination element or prev/next
 		var navClickType = btn.prop('nodeName');
-		//remove the active class from the currently active pagination element
 		var $activeLi = $('.pagination').find("li.active");
-		$activeLi.removeClass('active');
-
 		var current = $('.PortSwap.active')
 		var next = current.next('.PortSwap');
 		var prev = current.prev('.PortSwap');
+		//remove the active class from the currently active pagination element
+		$activeLi.removeClass('active');
+		//remove the active class from the currently active content element
 		current.hide().removeClass('active');
-		if(navClickType == 'A'){ //actions if prev/next is clicked
+		//actions if prev/next is clicked
+		if(navClickType == 'A'){
 				var theID = btn.attr('id');
 				var direction = theID.split('arrow')[1];
 				if(direction == 'Prev'){
@@ -443,7 +444,8 @@ function prevNext(btn){
 								$('.pagination').find("li:first").addClass("active");
 						}
 				}
-		} else { //actions if pagination element is clicked
+		} else {
+		//actions if pagination element is clicked
 				btn.addClass('active');
 				$activeEl = $('.pagination').find("li.active");
 				var contentID = '#Content' + $activeEl.find('a').attr('id').split('_')[1];

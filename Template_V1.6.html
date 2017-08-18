@@ -14,6 +14,7 @@
   <link href="css/interactive-transcript.css" rel="stylesheet" type="text/css" />
   <link href="css/videojs-resolution-switcher.css" rel="stylesheet">
   <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/progressbar.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="http://p3.3playmedia.com/p3sdk.current.js"></script>
   <!-- If you'd like to support IE8 -->
@@ -273,43 +274,43 @@
         <div class="row" style="margin-bottom: 3px">
           <div class="questionAnswers">
             <div style="background-color:#f5f5f5; height: 25px;"> Biceps curl
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz###_1" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_1" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
             </div>
             <br>
             <div style="background-color:#f5f5f5; height: 25px;"> Squat
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz###_2" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_2" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
             </div>
             <br>
             <div style="background-color:#f5f5f5; height: 25px;"> Frontal plane lunge
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz###_3" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_3" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
             </div>
             <br>
             <div style="background-color:#f5f5f5; height: 25px;"> Squat jump
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz###_4" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_4" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
             </div>
             <br>
             <div style="background-color:#f5f5f5; height: 25px;"> Side lateral raise
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz###_5" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_5" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
             </div>
             <br>
             <div style="background-color:#f5f5f5; height: 25px;"> Transverse plane lunge
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz###_6" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_6" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
             </div>
             <br>
             <div style="background-color:#f5f5f5; height: 25px;"> Tubing side step
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz###_7" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_7" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
             </div>
             <br>
             <div style="background-color:#f5f5f5; height: 25px;"> Trunk rotation
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz###_8" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_8" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
             </div>
             <br>
             <div style="background-color:#f5f5f5; height: 25px;"> Throwing
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz###_9" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_9" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
             </div>
             <br>
             <div style="background-color:#f5f5f5; height: 25px;"> Swinging a bat
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz###_10" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_10" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
             </div>
             <br>
           </div>
@@ -335,61 +336,86 @@
 
     <!--  Interactivity JavaScript-->
     <script>
-	var numTries = 0;
-$( "#quiz###" ).click(function() {
-	numTries = numTries +1;
-	var a1 = document.getElementById("quiz###_1").value;
-	var a2 = document.getElementById("quiz###_2").value;
-	var a3 = document.getElementById("quiz###_3").value;
-	var a4 = document.getElementById("quiz###_4").value;
-	var a5 = document.getElementById("quiz###_5").value;
-	var a6 = document.getElementById("quiz###_6").value;
-	var a7 = document.getElementById("quiz###_7").value;
-	var a8 = document.getElementById("quiz###_8").value;
-	var a9 = document.getElementById("quiz###_9").value;
-	var a10 = document.getElementById("quiz###_10").value;
+    var numTries = 0;
+    $( "#quiz1" ).click(function() {
+    	numTries = numTries +1;
+    	var a1 = document.getElementById("quiz1_1").value;
+    	var a2 = document.getElementById("quiz1_2").value;
+    	var a3 = document.getElementById("quiz1_3").value;
+    	var a4 = document.getElementById("quiz1_4").value;
+    	var a5 = document.getElementById("quiz1_5").value;
+    	var a6 = document.getElementById("quiz1_6").value;
+    	var a7 = document.getElementById("quiz1_7").value;
+    	var a8 = document.getElementById("quiz1_8").value;
+    	var a9 = document.getElementById("quiz1_9").value;
+    	var a10 = document.getElementById("quiz1_10").value;
 
-	if (a1 == "A" && a2 == "A" && a3 == "B" && a4 == "A" && a5 == "B" && a6 == "C" && a7 == "B" && a8 == "C" && a9 == "C" && a10== "C") {
- 		document.getElementById("rationale###").innerHTML = "That is <b>Correct!</b> Please continue.";
-		$("#rationale###").removeAttr( "style" ).hide().fadeIn(1000);
-		$("#quiz###_prev").removeAttr( "style" ).hide().fadeIn(1000);
-		$("#quiz###_next").removeAttr( "style" ).hide().fadeIn(1000);
-		$("#quiz###").hide();
-		numTries = 0;
-		} else {
-			document.getElementById("rationale###").innerHTML = "That is <b>Incorrect!</b> Please try again.";
-			$("#rationale###").removeAttr( "style" ).hide().fadeIn(500);
+    	if (a1 == "A" && a2 == "A" && a3 == "B" && a4 == "A" && a5 == "B" && a6 == "C" && a7 == "B" && a8 == "C" && a9 == "C" && a10== "C") {
+     		document.getElementById("rationale1").innerHTML = "That is <b>Correct!</b> Please continue.";
+    		$("#rationale1").removeAttr( "style" ).hide().fadeIn(1000);
+    		$("#quiz1_prev").removeAttr( "style" ).hide().fadeIn(1000);
+    		$("#quiz1_next").removeAttr( "style" ).hide().fadeIn(1000);
+    		$("#quiz1").hide();
+    		finishedInt();
+    		numTries = 0;
+    		} else {
+    			document.getElementById("rationale1").innerHTML = "That is <b>Incorrect!</b> Please try again.";
+    			$("#rationale1").removeAttr( "style" ).hide().fadeIn(500);
 
-			if (a1 != "A") {document.getElementById("quiz###_1").value = "";}
-			if (a2 != "A") {document.getElementById("quiz###_2").value = "";}
-			if (a3 != "B") {document.getElementById("quiz###_3").value = "";}
-			if (a4 != "A") {document.getElementById("quiz###_4").value = "";}
-			if (a5 != "B") {document.getElementById("quiz###_5").value = "";}
-			if (a6 != "C") {document.getElementById("quiz###_6").value = "";}
-			if (a7 != "B") {document.getElementById("quiz###_7").value = "";}
-			if (a8 != "C") {document.getElementById("quiz###_8").value = "";}
-			if (a9 != "C") {document.getElementById("quiz###_9").value = "";}
-			if (a10 != "C") {document.getElementById("quiz###_10").value = "";}
+    			if (a1 != "A") {document.getElementById("quiz1_1").value = "";}
+    			if (a2 != "A") {document.getElementById("quiz1_2").value = "";}
+    			if (a3 != "B") {document.getElementById("quiz1_3").value = "";}
+    			if (a4 != "A") {document.getElementById("quiz1_4").value = "";}
+    			if (a5 != "B") {document.getElementById("quiz1_5").value = "";}
+    			if (a6 != "C") {document.getElementById("quiz1_6").value = "";}
+    			if (a7 != "B") {document.getElementById("quiz1_7").value = "";}
+    			if (a8 != "C") {document.getElementById("quiz1_8").value = "";}
+    			if (a9 != "C") {document.getElementById("quiz1_9").value = "";}
+    			if (a10 != "C") {document.getElementById("quiz1_10").value = "";}
 
-	}
+    	}
 
-			if (numTries == 3 || numTries == 7) {
-		document.getElementById("rationale###").innerHTML = "HINT: Correct answers will remain and all incorrect answers will be removed.";
-	}
+    			if (numTries == 3 || numTries == 7) {
+    		document.getElementById("rationale1").innerHTML = "HINT: Correct answers will remain and all incorrect answers will be removed.";
+    	}
 
-});
+    });
 
-		function caps(element){
-    element.value = element.value.toUpperCase();
-}
+    		function caps(element){
+        element.value = element.value.toUpperCase();
+    }
 </script>
-  </div>
-	</div>
+</div>
 
-    <!-- Content Section -->
-    <!-- Footer -->
-    <div id="footer"></div>
-  </div>
+<!-- Content Section -->
+
+</div>
+<!-- Content Section -->
+
+</div>
+
+<!-- Footer Row -->
+<hr style="clear:both; visibility: hidden;">
+<div class="my-footer">
+<div class="row">
+<div class="col-lg-6">
+  <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="removeStorage()">DEV Remove Storage</button>
+  <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="finishedInt()">DEV Finish INT</button>
+  <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="finishedQuiz()">DEV Finish Quiz</button>
+  <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="finishedCourse()">DEV Finish Course</button>
+</div>
+<div class="col-lg-2 no-print">
+  <div class="progress" value="95" id="lesson_progess"></div>
+</div>
+<div class="col-lg-2 no-print">
+  <div class="progress" value="25" id="chapter_progress"></div>
+</div>
+<div class="col-lg-2 no-print">
+  <div class="progress" value="45" id="course_progress"></div>
+</div>
+</div>
+</div>
+
 <!-- Video Player JS -->
 <script src="js/video.js"></script>
 <script src="js/videojs-resolution-switcher.js"></script>
