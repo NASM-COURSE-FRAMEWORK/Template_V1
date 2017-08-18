@@ -1,4 +1,7 @@
+
 $(document).ready(function() {
+		//Create Progress bars
+		createProgress();	
 		//Load English XML into Elements
 		$.ajax({
 				url: 'data/english.xml',
@@ -23,14 +26,24 @@ $(document).ready(function() {
 						console.log("Failed");
 				}
 		});
+	
 		//load pagination based on number of content divs
 		var numContentBlocks = $('.PortSwap').length;
+	
 		for(var i = 1; i <= numContentBlocks; i++){
 				$('#mainPagination').append('<li class="PageSwap'+((i==1)?' active':'')+'"><a href="#" id="page_'+i+'">'+i+'</a></li>');
 		}
 
-		$('.prevNextBtn').click(function(){ prevNext($(this)); });
-		$('.PageSwap').click(function(){ prevNext($(this)); });
+		$('.prevNextBtn').click(function(){
+			//Run Progress Bar Update.  Must only run once per Content Page
+			runProgressBar();
+			prevNext($(this)); });
+		$('.PageSwap').click(function(){
+			//Run Progress Bar Update.  Must only run once per Content Page
+			runProgressBar();
+			prevNext($(this)); });
+	
+	
 		//SCORM Intitialization
 		//Declare Scorm Variables
 		var scorm = pipwerks.SCORM;  //Shortcut
@@ -38,9 +51,288 @@ $(document).ready(function() {
 		initCourse();
 
 		videojs('video1').videoJsResolutionSwitcher();
+	
+
 });
 
+
+
+//Config For Learning Objective Variables. 
+//Lesson Set Item must be Unique per Learning Objective.
+//Chapter Set Item must be unique per SCORM file or Chapter
+// USE FIND AND REPLACE TO UPDATE ALL LESSON AND CHAPTER ID'S.
+
+
+//Lesson Length
+var lessonLength = 25;
+//Chapter Length
+var chapterLength = 50;
+//Course Length
+var courseLength = 452;
+
+
+//Declare Progress Bar Variables and Store them Locally.
+if (typeof(Storage) !== "undefined") {
+	//Check if Lesson is Set to Zero.
+	//Update Lesson Local Storate ID Per Lesson
+	if (localStorage.c01l01 < 1)
+		{
+			//alert("test");
+			localStorage.setItem("ch01", [1/chapterLength*100]);
+			//Update Lesson Local Storate ID Per Lesson
+			localStorage.setItem("c01l01", [1/lessonLength*100]);
+			localStorage.setItem("c", [1/courseLength*100]);
+		}
+} else {
+    // Sorry! No Web Storage support..
+	alert("No Local Storage");
+}
+
+// Lesson Progress
+//Update Lesson,Chapter Local Storate ID Per Lesson
+var lessonProg = Number(localStorage.c01l01);
+
+//Chapter Progress
+var chapterProg = Number(localStorage.ch01);
+
+//Course Progress
+var courseProg =Number(localStorage.c);
+
+
+
+//Dev Function to Remove Local Storage
+function removeStorage() {
+	localStorage.setItem("ch01", "0");
+	//Update Lesson,Chapter Local Storate ID Per Lesson
+	localStorage.setItem("c01l01", "0");
+	localStorage.setItem("c", "0");
+}
+
+//Create Progress Bar Function
+function createProgress() {
+
+	circle1 = new ProgressBar.Line('#lesson_progess', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	circle2 = new ProgressBar.Line('#chapter_progress', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	circle3 = new ProgressBar.Line('#course_progress', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+
+	circle1.animate((lessonProg / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#ffd920'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Learning Objective: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+
+	circle2.animate((chapterProg / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+
+	circle3.animate((courseProg / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#5e7c51c'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Course: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+}
+
+//Update Progress Bar
+function updateProgress() {
+
+	//var value = ($(this).attr('value') / 100);
+	var startColor = '#FC5B3F';
+	var endColor = ($(this).attr('pColor'));
+	circle1.animate((lessonProg / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#ffd920'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Learning Objective: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+
+	circle2.animate((chapterProg / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	circle3.animate((courseProg / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#5e7c51c'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Course: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+}
+
+//Function to Update Progress Bar if Interactivity is completed
+function finishedInt() {
+	lessonProg = 100;
+	updateProgress();
+	if (typeof(Storage) !== "undefined") {
+		//Update Lesson Local Storate ID Per Lesson
+    	localStorage.c01l01 = lessonProg;
+
+} else {
+    // Sorry! No Web Storage support..
+	alert("No Local Storage");
+}
+}
+
+//Function to Update Progress Bar if Quiz is completed
+function finishedQuiz() {
+	chapterProg = 100;
+	updateProgress();
+	if (typeof(Storage) !== "undefined") {
+		//Update Lesson Local Storate ID Per Lesson
+		localStorage.ch01 = chapterProg;
+
+} else {
+    // Sorry! No Web Storage support..
+	alert("No Local Storage");
+}
+}
+
+//Function to Update Progress Bar if Course is completed
+function finishedCourse() {
+	courseProg = 100;
+	updateProgress();
+	if (typeof(Storage) !== "undefined") {
+		//Update Lesson Local Storate ID Per Lesson
+		localStorage.c = courseProg;
+
+} else {
+    // Sorry! No Web Storage support..
+	alert("No Local Storage");
+}
+}
+
+//Function to Run after Next Button or when Content Div is revealed.
+//Update Lesson,Chapter Local Storate ID Per Lesson
+function runProgressBar() {
+	//This code will grab current progress and update LocalStorage.
+	//If Statement to stop progressing once you reach 100 percent.
+	//Lesson will stop before 100 percent and wait for Interactivity Completed
+	//Chapter will stop before 100 percent and wait for Quiz Completed
+	//Course will stop before 100 percent and wait for All Quizzes Completed
+	if (lessonProg < (100 - ((1/lessonLength)*100))) {
+		lessonProg = (lessonProg + ((1/lessonLength)*100) - 1);
+		updateProgress();
+				//Store new calculations into Local Storage
+				if (typeof(Storage) !== "undefined") {
+					//Update Lesson Local Storate ID Per Lesson
+					localStorage.c01l01 = lessonProg;
+
+					} else {
+						// Sorry! No Web Storage support..
+						alert("No Local Storage");
+					}
+
+	}
+		if (chapterProg < (100 - ((1/chapterLength)*100))) {
+		chapterProg = (chapterProg + ((1/chapterLength)*100) - 1);
+		updateProgress();
+				//Store new calculations into Local Storage
+				if (typeof(Storage) !== "undefined") {
+					//Update Lesson Local Storate ID Per Lesson
+					localStorage.ch01 = chapterProg;
+
+					} else {
+						// Sorry! No Web Storage support..
+						alert("No Local Storage");
+					}
+
+	}
+	
+		if (courseProg < (98 - ((1/courseLength)*100))) {
+		courseProg = (courseProg + ((1/courseLength)*100));
+		updateProgress();
+				//Store new calculations into Local Storage
+				if (typeof(Storage) !== "undefined") {
+					//Update Lesson Local Storate ID Per Lesson
+					localStorage.c = courseProg;
+
+					} else {
+						// Sorry! No Web Storage support..
+						alert("No Local Storage");
+					}
+
+	}
+}
+
+
+
+
 //SCORM Functions
+
 function handleError(msg){
    console.log(msg);
    //window.close();
@@ -104,6 +396,7 @@ function setComplete(){
       }
    }
 }
+//SCORM Functions
 
 $(function(){
 		"use strict";
