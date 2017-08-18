@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NASM Course Template</title>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NASM Course Template</title>
 
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/styles1.css" rel="stylesheet" type="text/css">
-  <link href="css/video-js.css" rel="stylesheet">
-  <link href="css/video-styles.css" rel="stylesheet" type="text/css" />
-  <link href="css/interactive-transcript.css" rel="stylesheet" type="text/css" />
-  <link href="css/videojs-resolution-switcher.css" rel="stylesheet">
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="js/progressbar.min.js"></script>
-  <script src="js/scripts.js"></script>
-  <script src="http://p3.3playmedia.com/p3sdk.current.js"></script>
-  <!-- If you'd like to support IE8 -->
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/styles1.css" rel="stylesheet" type="text/css">
+<link href="css/video-js.css" rel="stylesheet">
+<link href="css/video-styles.css" rel="stylesheet" type="text/css" />
+<link href="css/interactive-transcript.css" rel="stylesheet" type="text/css" />
+<link href="css/videojs-resolution-switcher.css" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/progressbar.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="http://p3.3playmedia.com/p3sdk.current.js"></script>
+<!-- If you'd like to support IE8 -->
 
-  <script type="text/javascript" src="SCORM_API_wrapper.js"></script>
-  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-  </head>
-  <body>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+</head>
+<body>
 
 <!-- Menu System-->
 <div class="container-fluid" style="width:95%">
@@ -35,27 +35,21 @@
           </div>
           <div class="collapse navbar-collapse navbar-menubuilder">
             <ul class="nav navbar-nav">
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learning Objectives
-                <span class="caret"></span></a>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learning Objectives <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#Obj1">Objective One</a></li>
                   <li><a href="#">Objective Two</a></li>
                   <li><a href="#">Objective Three</a></li>
                 </ul>
               </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Videos
-                <span class="caret"></span></a>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Videos <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">One</a></li>
                   <li><a href="#">Two</a></li>
                   <li><a href="#">Three</a></li>
                 </ul>
               </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interactivities
-                <span class="caret"></span></a>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interactivities <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">One</a></li>
                   <li><a href="#">Two</a></li>
@@ -72,16 +66,12 @@
               .active { display:block; }
             </style>
             <div class="pagBlock navbar-right">
-              <div class="pagCol">
-                <a id="arrowPrev" class="prevNextBtn" aria-label="Previous"> <span aria-hidden="true"><<</span> </a>
-              </div>
+              <div class="pagCol"> <a id="arrowPrev" class="prevNextBtn" aria-label="Previous"> <span aria-hidden="true"><<</span> </a> </div>
               <div class="pagCol pagColMain">
                 <ul class="pagination pagination-sm" id="mainPagination">
                 </ul>
               </div>
-              <div class="pagCol">
-                <a id="arrowNext" class="prevNextBtn" aria-label="Next"> <span aria-hidden="true">>></span> </a>
-              </div>
+              <div class="pagCol"> <a id="arrowNext" class="prevNextBtn" aria-label="Next"> <span aria-hidden="true">>></span> </a> </div>
             </div>
           </div>
         </div>
@@ -89,70 +79,71 @@
     </div>
   </div>
 </div>
-<!-- Menu System-->
+<!-- Menu System--> 
 
 <!-- Main Body -->
-<div class="container-fluid" style="width:85%;">
-<!-- Content Section -->
-<div class ="PortSwap active" id="Content1">
+<div class="container-fluid" style="width:85%;"> 
+ 
+  <!-- Content Section -->
+  <div class ="PortSwap active" id="Content1"> 
     <!-- Add Padding to accomodate menu but hide in print-->
     <div class="row no-print" style="padding-top:45px;"></div>
-    <div class="row">
-    <!-- Top Header and Page Toolbar-->
-    <div class="col-lg-9">
+    <div class="row"> 
+      <!-- Top Header and Page Toolbar-->
+      <div class="col-lg-9">
         <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 1</div>
       </div>
-  </div>
+    </div>
     <!-- Main Content Row -->
     <div class="row">
-    <div class="col-lg-9 col-md-9 col-sm-12">
+      <div class="col-lg-9 col-md-9 col-sm-12">
         <div class="left-section">
-        <div class="content-h3">The Prevalence of Obesity</div>
-        <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
-        <div class="content-h2">History of the Fitness Industry</div>
-        <div class="content-p">
+          <div class="content-h3">The Prevalence of Obesity</div>
+          <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
+          <div class="content-h2">History of the Fitness Industry</div>
+          <div class="content-p">
             <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</p>
             <p>In the 1960s, women’s fitness centers, or “figure salons,” became a popular trend. Unlike male-oriented gyms, where the focus was on developing muscle size and strength, women’s fitness centers typically focused on weight loss and physique improvement. Instead of barbells and dumbbells, most exercise machines in women’s fitness centers were passive and focused on “spot reduction.” For example, a rolling machine was used to “roll away fat” or a mechanical </p>
           </div>
-<!--        <div class="printOnly" style="height:320px;"></div>-->
-        <div class="row">
+          <!--        <div class="printOnly" style="height:320px;"></div>-->
+          <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-md-offset-2 col-md-8">
-            <div class="wrapper">
+              <div class="wrapper">
                 <div class="videocontent no-print">
-                <div class="p3sdk-container p3sdk-debug" player_id="video1" player_type="videojs">
-                    <video id="video1" class="video-js vjs-16-9 vjs-default-skin" controls preload="auto" width="640" height="264"  data-setup='{"fluid": true}'>
-                    <!--Insert SD Video URL-->
-                    <source src="http://production.smedia.lvp.llnw.net/c795395f130d4737be848be06f52ea62/bB/ccWC5ymezYF6CL4G2iqRVaYu5vTLjVE5y6MxVDsJo/nasm_cpt_cueing_1-1.mp4?x=0&h=9afcbf93f68867fb14c476d1b83a2693" type='video/mp4' label='480 SD' res='480' />
-                    <!--Insert HD Video URL-->
-                    <source src="http://production.smedia.lvp.llnw.net/c795395f130d4737be848be06f52ea62/bp/nUpBpRO5yib1oirJ3YkzSXXa_JKgFPvcOcA09dWNg/nasm_cpt_cueing_1-1.mp4?x=0&h=c171439f4d170f56dcbd1ceb7526d74f" type='video/mp4' label='720 HD' res='720'/>
-
-                    <!--Insert Closed Captioning URL-->
-                    <track label="English" kind="captions" srclang="en" src="/file.php/10190/_CC/NASM_CPT_Cueing_1.1.vtt"/>
-                    <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
-                  </video>
-                    <div class="transcript">
-                    <!--Insert Closed Captioning File ID and Project ID-->
-                    <div class="p3sdk-interactive-transcript" file_id="1206310" project_id="19164">
+                  <div class="p3sdk-container p3sdk-debug" player_id="video1" player_type="videojs">
+                    <video id="video1" class="video-js vjs-16-9 vjs-default-skin" controls preload="auto" width="640" height="264"  data-setup='{"fluid": true}'> 
+                      <!--Insert SD Video URL-->
+                      <source src="http://production.smedia.lvp.llnw.net/c795395f130d4737be848be06f52ea62/bB/ccWC5ymezYF6CL4G2iqRVaYu5vTLjVE5y6MxVDsJo/nasm_cpt_cueing_1-1.mp4?x=0&h=9afcbf93f68867fb14c476d1b83a2693" type='video/mp4' label='480 SD' res='480' />
+                      <!--Insert HD Video URL-->
+                      <source src="http://production.smedia.lvp.llnw.net/c795395f130d4737be848be06f52ea62/bp/nUpBpRO5yib1oirJ3YkzSXXa_JKgFPvcOcA09dWNg/nasm_cpt_cueing_1-1.mp4?x=0&h=c171439f4d170f56dcbd1ceb7526d74f" type='video/mp4' label='720 HD' res='720'/>
+                      
+                      <!--Insert Closed Captioning URL-->
+                      <track label="English" kind="captions" srclang="en" src="/file.php/10190/_CC/NASM_CPT_Cueing_1.1.vtt"/>
+                      <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
+                    </video>
+                    <div class="transcript"> 
+                      <!--Insert Closed Captioning File ID and Project ID-->
+                      <div class="p3sdk-interactive-transcript" file_id="1206310" project_id="19164">
                         <button style="margin-bottom:15px; margin-top:15px;" class="p3sdk-interactive-transcript-toggle-keywords-button btn btn-primary"> Highlight Keyword </button>
                         <button style="margin-bottom:15px; margin-top:15px;" class="p3sdk-interactive-transcript-download btn btn-primary" title="Download Transcript" download_format="pdf"> Download/Print Transcript </button>
                         <input type="text" value="Search" class="p3sdk-interactive-transcript-searchbox"/>
                         <div class="p3sdk-interactive-transcript-progressbar" search_result_marker="*">
-                        <div class="p3sdk-interactive-transcript-progress"></div>
-                      </div>
+                          <div class="p3sdk-interactive-transcript-progress"></div>
+                        </div>
                         <div class="p3sdk-interactive-transcript-content"> </div>
                         <div class="p3sdk-interactive-transcript-collapse-visible" style="text-align:center;"> <a href="javascript:void(0);" accesskey="1" style="color:blue;font-size:1.2em; width:100%; margin-top:15px; margin-bottom:5px; text-decoration:underline; text-align:center;" class="p3sdk-interactive-transcript-collapse p3sdk-collapse-onload icon-expand" label_when_expanded = "Hide Interactive Transcript" label_when_collapsed = "Show Interactive Transcript"> Hide Interactive Transcript</a><br>
-                        <p style="font-size:0.8em; text-align:center;">Optional: Click ALT or COMMAND 1 to enable</p>
+                          <p style="font-size:0.8em; text-align:center;">Optional: Click ALT or COMMAND 1 to enable</p>
+                        </div>
                       </div>
-                      </div>
+                    </div>
                   </div>
-                  </div>
+                </div>
               </div>
-              </div>
+            </div>
           </div>
-          </div>
+        </div>
       </div>
-      </div>
-    <div class="col-lg-3 col-md-3 col-sm-12">
+      <div class="col-lg-3 col-md-3 col-sm-12">
         <div class="right-section-bar1">Continuing Education</div>
         <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
         <div class="right-section-bar1">Continuing Education</div>
@@ -160,51 +151,48 @@
         <div class="right-section-boxhead1">TRAINER TIPS</div>
         <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
       </div>
-  </div>
+    </div>
     <!-- Footer Row -->
     <hr style="clear:both; visibility: hidden;">
     <div class="row">
-    <div class="col-lg-12">
-		<div class="my-footer">Text
-
+      <div class="col-lg-12">
+        <div class="my-footer">Text </div>
       </div>
-
-      </div>
-
-      </div>
+    </div>
   </div>
-    <!-- Content Section -->
-    <!-- Content Section -->
-    <div class ="PortSwap" id="Content2">
+  <!-- Content Section --> 
+  
+  <!-- Content Section -->
+  <div class ="PortSwap" id="Content2"> 
     <!-- Add Padding to accomodate menu but hide in print-->
     <div class="row no-print" style="padding-top:45px;"></div>
-    <div class="row">
-        <!-- Top Header and Page Toolbar-->
-        <div class="col-lg-7">
+    <div class="row"> 
+      <!-- Top Header and Page Toolbar-->
+      <div class="col-lg-7">
         <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 2</div>
       </div>
-      </div>
+    </div>
     <!-- Default Row w/ Columns -->
     <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-12">
+      <div class="col-lg-9 col-md-9 col-sm-12">
         <div class="left-section">
-            <div class="content-h3">The Prevalence of Obesity</div>
-            <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
-            <div class="content-h2">History of the Fitness Industry</div>
-            <div class="content-p"><a name="Obj1"></a>
-              <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world. </p>
-</div>
-            <div class="row">
+          <div class="content-h3">The Prevalence of Obesity</div>
+          <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
+          <div class="content-h2">History of the Fitness Industry</div>
+          <div class="content-p"><a name="Obj1"></a>
+            <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world. </p>
+          </div>
+          <div class="row">
             <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
             <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
           </div>
-            <div class="row">
+          <div class="row">
             <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
             <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
           </div>
-          </div>
+        </div>
       </div>
-        <div class="col-lg-3 col-md-3 col-sm-12">
+      <div class="col-lg-3 col-md-3 col-sm-12">
         <div class="right-section-bar1">Continuing Education</div>
         <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
         <div class="right-section-bar1">Continuing Education</div>
@@ -212,130 +200,127 @@
         <div class="right-section-boxhead1">TRAINER TIPS</div>
         <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
       </div>
-
-      </div>
+    </div>
     <!-- Footer Row -->
     <hr style="clear:both; visibility: hidden;">
     <div class="row">
-    <div class="col-lg-12">
-		<div class="my-footer">Text
-
-      </div>
-
-      </div>
-
-      </div>
-  </div>
-   <div class ="PortSwap" id="Content3">
-   <div class="row" style="margin-top:50px;">
-    <div class="text-center col-md-offset-0 col-md-12 col-lg-offset-0 col-lg-12">
-      <div class="row">
-        <div class="col-lg-12 col-md-12">
-          <div class="interactivity-header">
-            <h1>Movement and Planes of Motion</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <!--Row 2 Instructions-->
+      <div class="col-lg-12">
+        <div class="my-footer">Text </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-offset-0 col-sm-offset-0 col-md-6 col-xs-offset-0 col-xs-12 col-sm-12 col-lg-5 col-lg-offset-1 col-lg-push-5 col-md-push-6">
-      <div class="row" style="margin-top:50px;"></div>
-      <div class="col-centered col-max headers col-md-offset-0 col-sm-offset-0 col-sm-12 col-md-12 col-lg-offset-0 col-lg-12 col-xs-offset-0 col-xs-12">
+  <!-- Content Section -->
+  
+  <div class ="PortSwap" id="Content3">
+    <div class="row" style="margin-top:50px;">
+      <div class="text-center col-md-offset-0 col-md-12 col-lg-offset-0 col-lg-12">
         <div class="row">
-          <div class="col-lg-12">
-            <div class="well">
-              <div class="questionText" style="margin-bottom:10px">
-                <p>Match the movement to the plane of motion. </p>
-                <br>
-                <p>(A) Sagittal</p>
-                <p>(B) Frontal</p>
-                <p>(C) Transverse </p>
-                <br>
-                <br>
-                <div id="rationale###" style="font-size:14px; font-weight:bold; margin-top:10px;"> </div>
+          <div class="col-lg-12 col-md-12">
+            <div class="interactivity-header">
+              <h1>Movement and Planes of Motion</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row"> 
+          <!--Row 2 Instructions--> 
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-offset-0 col-sm-offset-0 col-md-6 col-xs-offset-0 col-xs-12 col-sm-12 col-lg-5 col-lg-offset-1 col-lg-push-5 col-md-push-6">
+        <div class="row" style="margin-top:50px;"></div>
+        <div class="col-centered col-max headers col-md-offset-0 col-sm-offset-0 col-sm-12 col-md-12 col-lg-offset-0 col-lg-12 col-xs-offset-0 col-xs-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="well">
+                <div class="questionText" style="margin-bottom:10px">
+                  <p>Match the movement to the plane of motion. </p>
+                  <br>
+                  <p>(A) Sagittal</p>
+                  <p>(B) Frontal</p>
+                  <p>(C) Transverse </p>
+                  <br>
+                  <br>
+                  <div id="rationale###" style="font-size:14px; font-weight:bold; margin-top:10px;"> </div>
+                </div>
+              </div>
+              <div id="quiz###" class="btn btn-two btn-block" style="max-width:200px;">
+                <p>Submit</p>
               </div>
             </div>
-            <div id="quiz###" class="btn btn-two btn-block" style="max-width:200px;">
-              <p>Submit</p>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-6 col-xs-12 col-sm-12 col-lg-5 col-lg-offset-0 col-lg-pull-5 col-md-pull-6">
-      <div class="col-max headers col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-12 col-md-10 col-md-offset-1 col-lg-offset-0 col-lg-12">
-        <div class="row" style="margin-top:50px;"></div>
+      <div class="col-md-6 col-xs-12 col-sm-12 col-lg-5 col-lg-offset-0 col-lg-pull-5 col-md-pull-6">
+        <div class="col-max headers col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-12 col-md-10 col-md-offset-1 col-lg-offset-0 col-lg-12">
+          <div class="row" style="margin-top:50px;"></div>
+        </div>
+        <div class="col-md-offset-0 col-md-11 col-lg-offset-0 col-lg-12 col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12">
+          <div class="row" style="margin-bottom: 3px">
+            <div class="questionAnswers">
+              <div style="background-color:#f5f5f5; height: 25px;"> Biceps curl
+                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_1" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              </div>
+              <br>
+              <div style="background-color:#f5f5f5; height: 25px;"> Squat
+                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_2" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              </div>
+              <br>
+              <div style="background-color:#f5f5f5; height: 25px;"> Frontal plane lunge
+                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_3" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              </div>
+              <br>
+              <div style="background-color:#f5f5f5; height: 25px;"> Squat jump
+                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_4" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              </div>
+              <br>
+              <div style="background-color:#f5f5f5; height: 25px;"> Side lateral raise
+                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_5" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              </div>
+              <br>
+              <div style="background-color:#f5f5f5; height: 25px;"> Transverse plane lunge
+                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_6" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              </div>
+              <br>
+              <div style="background-color:#f5f5f5; height: 25px;"> Tubing side step
+                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_7" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              </div>
+              <br>
+              <div style="background-color:#f5f5f5; height: 25px;"> Trunk rotation
+                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_8" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              </div>
+              <br>
+              <div style="background-color:#f5f5f5; height: 25px;"> Throwing
+                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_9" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              </div>
+              <br>
+              <div style="background-color:#f5f5f5; height: 25px;"> Swinging a bat
+                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_10" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+        <!-- Header Row --> 
+        <!-- Main Row --> 
       </div>
-      <div class="col-md-offset-0 col-md-11 col-lg-offset-0 col-lg-12 col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12">
-        <div class="row" style="margin-bottom: 3px">
-          <div class="questionAnswers">
-            <div style="background-color:#f5f5f5; height: 25px;"> Biceps curl
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_1" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-            </div>
-            <br>
-            <div style="background-color:#f5f5f5; height: 25px;"> Squat
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_2" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-            </div>
-            <br>
-            <div style="background-color:#f5f5f5; height: 25px;"> Frontal plane lunge
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_3" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-            </div>
-            <br>
-            <div style="background-color:#f5f5f5; height: 25px;"> Squat jump
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_4" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-            </div>
-            <br>
-            <div style="background-color:#f5f5f5; height: 25px;"> Side lateral raise
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_5" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-            </div>
-            <br>
-            <div style="background-color:#f5f5f5; height: 25px;"> Transverse plane lunge
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_6" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-            </div>
-            <br>
-            <div style="background-color:#f5f5f5; height: 25px;"> Tubing side step
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_7" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-            </div>
-            <br>
-            <div style="background-color:#f5f5f5; height: 25px;"> Trunk rotation
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_8" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-            </div>
-            <br>
-            <div style="background-color:#f5f5f5; height: 25px;"> Throwing
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_9" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-            </div>
-            <br>
-            <div style="background-color:#f5f5f5; height: 25px;"> Swinging a bat
-              <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_10" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-            </div>
-            <br>
+      <div class="col-lg-offset-0 col-sm-offset-0 col-md-offset-0 col-sm-12 col-lg-12 col-md-12 col-xs-offset-0 col-xs-12">
+        <div class="row" style="margin-top:50px">
+          <div class="headers col-md-offset-0 col-sm-offset-0 col-lg-offset-1 col-lg-2 col-md-3 col-sm-4 col-xs-6">
+            <button style="display:none;" id="quiz###_prev" class="btn btn-one btn-block" onClick="prevBtn()">
+            <p>Previous</p>
+            </button>
+          </div>
+          <div class="headers col-lg-2 col-lg-offset-6 col-md-3 col-md-offset-6 col-sm-4 col-sm-offset-4 col-xs-6">
+            <button style="display:none;" id="quiz###_next" class="btn btn-one btn-block"  onClick="nextBtn()">
+            <p>Next</p>
+            </button>
           </div>
         </div>
       </div>
-      <!-- Header Row -->
-      <!-- Main Row -->
-    </div>
-    <div class="col-lg-offset-0 col-sm-offset-0 col-md-offset-0 col-sm-12 col-lg-12 col-md-12 col-xs-offset-0 col-xs-12">
-      <div class="row" style="margin-top:50px">
-        <div class="headers col-md-offset-0 col-sm-offset-0 col-lg-offset-1 col-lg-2 col-md-3 col-sm-4 col-xs-6">
-          <button style="display:none;" id="quiz###_prev" class="btn btn-one btn-block" onClick="prevBtn()">
-          <p>Previous</p>
-          </button>
-        </div>
-        <div class="headers col-lg-2 col-lg-offset-6 col-md-3 col-md-offset-6 col-sm-4 col-sm-offset-4 col-xs-6">
-          <button style="display:none;" id="quiz###_next" class="btn btn-one btn-block"  onClick="nextBtn()">
-          <p>Next</p>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!--  Interactivity JavaScript-->
-    <script>
+      
+      <!--  Interactivity JavaScript--> 
+      <script>
     var numTries = 0;
     $( "#quiz1" ).click(function() {
     	numTries = numTries +1;
@@ -384,43 +369,94 @@
     		function caps(element){
         element.value = element.value.toUpperCase();
     }
-</script>
-</div>
+</script> 
+    </div>
+    
+    <!-- Content Section --> 
+    
+  </div>
+  <!-- Content Section --> <br>
 
-<!-- Content Section -->
-
+  <!-- Content Section -->
+  <div class ="PortSwap" id="Content4"> 
+    <!-- Add Padding to accomodate menu but hide in print-->
+    <div class="row no-print" style="padding-top:45px;"></div>
+    <div class="row"> 
+      <!-- Top Header and Page Toolbar-->
+      <div class="col-lg-7">
+        <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 2</div>
+      </div>
+    </div>
+    <!-- Default Row w/ Columns -->
+    <div class="row">
+      <div class="col-lg-9 col-md-9 col-sm-12">
+        <div class="left-section">
+          <div class="content-h3">The Prevalence of Obesity</div>
+          <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
+          <div class="content-h2">History of the Fitness Industry</div>
+          <div class="content-p"><a name="Obj1"></a>
+            <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world. </p>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+            <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+            <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="right-section-bar1">Continuing Education</div>
+        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
+        <div class="right-section-bar1">Continuing Education</div>
+        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
+        <div class="right-section-boxhead1">TRAINER TIPS</div>
+        <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
+      </div>
+    </div>
+    <!-- Footer Row -->
+    <hr style="clear:both; visibility: hidden;">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="my-footer">Text </div>
+      </div>
+    </div>
+  </div>
+  <!-- Content Section -->
+  
 </div>
-<!-- Content Section -->
-
-</div>
+<!-- Main Body -->
 
 <!-- Footer Row -->
 <hr style="clear:both; visibility: hidden;">
 <div class="my-footer">
-<div class="row">
-<div class="col-lg-6">
-  <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="removeStorage()">DEV Remove Storage</button>
-  <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="finishedInt()">DEV Finish INT</button>
-  <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="finishedQuiz()">DEV Finish Quiz</button>
-  <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="finishedCourse()">DEV Finish Course</button>
+  <div class="row">
+    <div class="col-lg-6">
+      <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="removeStorage()">DEV Remove Storage</button>
+      <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="finishedInt()">DEV Finish INT</button>
+      <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="finishedQuiz()">DEV Finish Quiz</button>
+      <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="finishedCourse()">DEV Finish Course</button>
+    </div>
+    <div class="col-lg-2 no-print">
+      <div class="progress" value="95" id="lesson_progess"></div>
+    </div>
+    <div class="col-lg-2 no-print">
+      <div class="progress" value="25" id="chapter_progress"></div>
+    </div>
+    <div class="col-lg-2 no-print">
+      <div class="progress" value="45" id="course_progress"></div>
+    </div>
+  </div>
 </div>
-<div class="col-lg-2 no-print">
-  <div class="progress" value="95" id="lesson_progess"></div>
-</div>
-<div class="col-lg-2 no-print">
-  <div class="progress" value="25" id="chapter_progress"></div>
-</div>
-<div class="col-lg-2 no-print">
-  <div class="progress" value="45" id="course_progress"></div>
-</div>
-</div>
-</div>
+<!-- Footer Row -->
 
 
-<!-- Video Player JS -->
-<script src="js/video.js"></script>
-<script src="js/videojs-resolution-switcher.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Video Player JS --> 
+<script src="js/video.js"></script> 
+<script src="js/videojs-resolution-switcher.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
