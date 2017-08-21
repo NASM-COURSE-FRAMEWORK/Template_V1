@@ -73,18 +73,24 @@ var chapterLength = 50;
 var courseLength = 452;
 
 
+
 //Declare Progress Bar Variables and Store them Locally.
 if (typeof(Storage) !== "undefined") {
 	//Check if Lesson is Set to Zero.
 	//Update Lesson Local Storate ID Per Lesson
-	if (localStorage.c01l01 < 1)
+	//alert(localStorage.ch01l01);
+	if (localStorage.ch01l01 === undefined)
 		{
-			//alert("test");
+			alert("undefined");
 			localStorage.setItem("ch01", [1/chapterLength*100]);
 			//Update Lesson Local Storate ID Per Lesson
-			localStorage.setItem("c01l01", [1/lessonLength*100]);
+			localStorage.setItem("ch01l01", [1/lessonLength*100]);
 			localStorage.setItem("c", [1/courseLength*100]);
 		}
+	else if (localStorage.ch01l01 < 1) {
+		//alert("less than 1");
+
+	}
 } else {
     // Sorry! No Web Storage support..
 	alert("No Local Storage");
@@ -92,7 +98,7 @@ if (typeof(Storage) !== "undefined") {
 
 // Lesson Progress
 //Update Lesson,Chapter Local Storate ID Per Lesson
-var lessonProg = Number(localStorage.c01l01);
+var lessonProg = Number(localStorage.ch01l01);
 
 //Chapter Progress
 var chapterProg = Number(localStorage.ch01);
@@ -104,10 +110,10 @@ var courseProg = Number(localStorage.c);
 
 //Dev Function to Remove Local Storage
 function removeStorage() {
-	localStorage.setItem("ch01", 0);
+	localStorage.removeItem("ch01");
 	//Update Lesson,Chapter Local Storate ID Per Lesson
-	localStorage.setItem("c01l01", 0);
-	localStorage.setItem("c", 0);
+	localStorage.removeItem("ch01l01");
+	localStorage.removeItem("c");
 }
 
 //Create Progress Bar Function
@@ -249,7 +255,7 @@ function runProgressBar() {
 		//Store new calculations into Local Storage
 		if (typeof (Storage) !== "undefined") {
 			//Update Lesson Local Storate ID Per Lesson
-			localStorage.c01l01 = lessonProg;
+			localStorage.ch01l01= lessonProg;
 
 		} else {
 			// Sorry! No Web Storage support..
@@ -294,7 +300,7 @@ function finishedInt() {
 	updateProgress();
 	if (typeof (Storage) !== "undefined") {
 		//Update Lesson Local Storate ID Per Lesson
-		localStorage.c01l01 = lessonProg;
+		localStorage.ch01l01= lessonProg;
 
 	} else {
 		// Sorry! No Web Storage support..
