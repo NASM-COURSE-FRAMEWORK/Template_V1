@@ -54,7 +54,7 @@ $(document).ready(function () {
 
 	videojs('video1').videoJsResolutionSwitcher();
 
-
+	
 });
 
 
@@ -74,19 +74,19 @@ var courseLength = 452;
 
 
 //Declare Progress Bar Variables and Store them Locally.
-if (typeof (Storage) !== "undefined") {
+if (typeof(Storage) !== "undefined") {
 	//Check if Lesson is Set to Zero.
 	//Update Lesson Local Storate ID Per Lesson
-	alert(localStorage.c01l01);
-	if ((localStorage.c01l01 >= 0) || (localStorage.c01l01 === "undefined")) {
-		//alert("test");
-		localStorage.setItem("ch01", [1 / chapterLength * 100]);
-		//Update Lesson Local Storate ID Per Lesson
-		localStorage.setItem("c01l01", [1 / lessonLength * 100]);
-		localStorage.setItem("c", [1 / courseLength * 100]);
-	}
+	if (localStorage.c01l01 < 1)
+		{
+			//alert("test");
+			localStorage.setItem("ch01", [1/chapterLength*100]);
+			//Update Lesson Local Storate ID Per Lesson
+			localStorage.setItem("c01l01", [1/lessonLength*100]);
+			localStorage.setItem("c", [1/courseLength*100]);
+		}
 } else {
-	// Sorry! No Web Storage support..
+    // Sorry! No Web Storage support..
 	alert("No Local Storage");
 }
 
@@ -104,10 +104,10 @@ var courseProg = Number(localStorage.c);
 
 //Dev Function to Remove Local Storage
 function removeStorage() {
-	localStorage.setItem("ch01", "undefined");
+	localStorage.setItem("ch01", 0);
 	//Update Lesson,Chapter Local Storate ID Per Lesson
-	localStorage.setItem("c01l01", "undefined");
-	localStorage.setItem("c", "undefined");
+	localStorage.setItem("c01l01", 0);
+	localStorage.setItem("c", 0);
 }
 
 //Create Progress Bar Function
