@@ -78,16 +78,16 @@ var courseLength = 452;
 if (typeof(Storage) !== "undefined") {
 	//Check if Lesson is Set to Zero.
 	//Update Lesson Local Storate ID Per Lesson
-	//alert(localStorage.ch01l01);
-	if (localStorage.ch01l01 === undefined)
+	//alert(localStorage.c01ch01l01);
+	if (localStorage.c01ch01l01 === undefined)
 		{
-			alert("undefined");
-			localStorage.setItem("ch01", [1/chapterLength*100]);
+			//alert("undefined");
+			localStorage.setItem("c01ch01", [1/chapterLength*100]);
 			//Update Lesson Local Storate ID Per Lesson
-			localStorage.setItem("ch01l01", [1/lessonLength*100]);
-			localStorage.setItem("c", [1/courseLength*100]);
+			localStorage.setItem("c01ch01l01", [1/lessonLength*100]);
+			localStorage.setItem("c01", [1/courseLength*100]);
 		}
-	else if (localStorage.ch01l01 < 1) {
+	else if (localStorage.c01ch01l01 > 1) {
 		//alert("less than 1");
 
 	}
@@ -98,22 +98,22 @@ if (typeof(Storage) !== "undefined") {
 
 // Lesson Progress
 //Update Lesson,Chapter Local Storate ID Per Lesson
-var lessonProg = Number(localStorage.ch01l01);
+var lessonProg = Number(localStorage.c01ch01l01);
 
 //Chapter Progress
-var chapterProg = Number(localStorage.ch01);
+var chapterProg = Number(localStorage.c01ch01);
 
 //Course Progress
-var courseProg = Number(localStorage.c);
+var courseProg = Number(localStorage.c01);
 
 
 
 //Dev Function to Remove Local Storage
 function removeStorage() {
-	localStorage.removeItem("ch01");
+	localStorage.removeItem("c01ch01");
 	//Update Lesson,Chapter Local Storate ID Per Lesson
-	localStorage.removeItem("ch01l01");
-	localStorage.removeItem("c");
+	localStorage.removeItem("c01ch01l01");
+	localStorage.removeItem("c01");
 }
 
 //Create Progress Bar Function
@@ -255,7 +255,7 @@ function runProgressBar() {
 		//Store new calculations into Local Storage
 		if (typeof (Storage) !== "undefined") {
 			//Update Lesson Local Storate ID Per Lesson
-			localStorage.ch01l01= lessonProg;
+			localStorage.c01ch01l01= lessonProg;
 
 		} else {
 			// Sorry! No Web Storage support..
@@ -269,7 +269,7 @@ function runProgressBar() {
 		//Store new calculations into Local Storage
 		if (typeof (Storage) !== "undefined") {
 			//Update Lesson Local Storate ID Per Lesson
-			localStorage.ch01 = chapterProg;
+			localStorage.c01ch01 = chapterProg;
 
 		} else {
 			// Sorry! No Web Storage support..
@@ -284,7 +284,7 @@ function runProgressBar() {
 		//Store new calculations into Local Storage
 		if (typeof (Storage) !== "undefined") {
 			//Update Lesson Local Storate ID Per Lesson
-			localStorage.c = courseProg;
+			localStorage.c01 = courseProg;
 
 		} else {
 			// Sorry! No Web Storage support..
@@ -300,7 +300,7 @@ function finishedInt() {
 	updateProgress();
 	if (typeof (Storage) !== "undefined") {
 		//Update Lesson Local Storate ID Per Lesson
-		localStorage.ch01l01= lessonProg;
+		localStorage.c01ch01l01= lessonProg;
 
 	} else {
 		// Sorry! No Web Storage support..
@@ -314,7 +314,7 @@ function finishedQuiz() {
 	updateProgress();
 	if (typeof (Storage) !== "undefined") {
 		//Update Lesson Local Storate ID Per Lesson
-		localStorage.ch01 = chapterProg;
+		localStorage.c01ch01 = chapterProg;
 
 	} else {
 		// Sorry! No Web Storage support..
@@ -328,7 +328,7 @@ function finishedCourse() {
 	updateProgress();
 	if (typeof (Storage) !== "undefined") {
 		//Update Lesson Local Storate ID Per Lesson
-		localStorage.c = courseProg;
+		localStorage.c01 = courseProg;
 
 	} else {
 		// Sorry! No Web Storage support..
