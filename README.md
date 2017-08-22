@@ -27,6 +27,10 @@ Need to update all unqiue ID's for local storage so that they are unique to each
 6. Zoom Function:
 -Perhaps look at simply changing the main container pecentage upon zooming in.
 
+7. Moodle Launch Page (IN PROGRESS)
+- Create buttons for launching each chapter.
+- Create progress bars for each chapter displayed above each button using the local storage variables.
+- Create an image rotator with exercise images and perhaps adds.
 
 CSS
 1. Clean up all current CSS code with comments for updating later.
