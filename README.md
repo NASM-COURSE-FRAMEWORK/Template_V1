@@ -17,7 +17,8 @@ JAVASCRIPT
 
 3. Progress Bar function (IN PROGRESS)
 - Need to update progress bar function to have a unique variable stored in the HTML file to represent the learning objective number.  We will have multiple learning objective files in each scorm package that all share the same scripts.js file and therefore we need to store the learning objective number in the HTML file and not the JS file.  We can update the JS file with a serieis of if statements to make sure the correct ID's are stored in local storage.
-Need to update all unqiue ID's for local storage so that they are unique to each course so they don't overlap.  File naming convention is 01ch01l01 for lessons. 01ch01 for chapters. 01c01 for courses.
+-Need to update all unqiue ID's for local storage so that they are unique to each course so they don't overlap.  File naming convention is 01ch01l01 for lessons. 01ch01 for chapters. 01c01 for courses.
+-Need to figure out how to differentiate learning objective html files eventhough they are using the same scripts.js file.  Perhaps move all progress bar code to local HTML file.
 
 4. Highlithing Function (IN PROGRESS)
 - Matt currently working on and looking into local storage option.
