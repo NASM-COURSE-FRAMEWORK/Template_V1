@@ -15,12 +15,44 @@
 <link href="css/videojs-resolution-switcher.css" rel="stylesheet">
 <script src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/progressbar.min.js"></script>
+<script type="text/javascript" src="js/masha.js"></script>
 <script src="js/scripts.js"></script>
 <script src="http://p3.3playmedia.com/p3sdk.current.js"></script>
 <!-- If you'd like to support IE8 -->
 
 <script type="text/javascript" src="SCORM_API_wrapper.js"></script>
 <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+<script>
+		//MaSHa Functions
+		// if jQuery is not available
+			if (window.addEventListener) {
+			  window.addEventListener('load', function() {
+				// can be called by domready
+				MaSha.instance = new MaSha();
+			  }, false);
+			} else {
+			  window.attachEvent('onload', function() {
+				// can be called by domready
+				MaSha.instance = new MaSha();
+			  });
+			}
+			// if jQuery available:
+			$(document).ready(function() {
+			  MaSha.instance = new MaSha();
+			});
+				function init_masha(){
+					MaSha.instance = new MaSha({'select_message': 'upmsg-selectable',
+												'ignored': '.ignored',
+												'validate': true});
+				}
+				if (window.addEventListener){
+					window.addEventListener('load', init_masha, false);
+				} else {
+					window.attachEvent('onload', init_masha);
+				}
+
+    </script>
 </head>
 <body>
 
@@ -83,7 +115,9 @@
 
 <!-- Main Body -->
 <div class="container-fluid" style="width:85%;"> 
- 
+
+<!-- Anything in selectable-conent class is able to be highlighted-->
+<div id="selectable-content"> 
   <!-- Content Section -->
   <div class ="PortSwap active" id="Content1"> 
     <!-- Add Padding to accomodate menu but hide in print-->
@@ -211,7 +245,7 @@
   </div>
   <!-- Content Section -->
   
-  <div class ="PortSwap" id="Content3">
+  <div class ="PortSwap no-print" id="Content3">
     <div class="row" style="margin-top:50px;">
       <div class="text-center col-md-offset-0 col-md-12 col-lg-offset-0 col-lg-12">
         <div class="row">
@@ -375,7 +409,7 @@
     <!-- Content Section --> 
     
   </div>
-  <!-- Content Section --> <br>
+  <!-- Content Section --> 
 
   <!-- Content Section -->
   <div class ="PortSwap" id="Content4"> 
@@ -426,6 +460,8 @@
   </div>
   <!-- Content Section -->
   
+</div>
+		
 </div>
 <!-- Main Body -->
 
