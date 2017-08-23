@@ -25,6 +25,7 @@ JAVASCRIPT
 - Currently stores in local storage between different page/content block loads but does not save when reopening the page.
 
 5. Search Function:
+- Add functionality that will search for word or phrase and if found go to that page or content block.
 
 6. Zoom Function:
 -Perhaps look at simply changing the main container pecentage upon zooming in.
@@ -38,6 +39,16 @@ JAVASCRIPT
 - Develop new HTML template with a quiz function.
 - Quiz should use XML to import text and answers from existing moodle XML files.  That way we do not need to rewrite all quiz items.
 - Develop CSS styles and media queries to make quiz look nice.
+
+9. SCORM Updates
+- Add completion percentage for each chapter into setComplete() function.
+- Look into adding the completion percentage into moodle report.
+- Update SCORM embed code in moodle to display as full page.
+- Look into linking to multiple chapters and how that will work from an open SCORM document.
+- Look into adding total time to setComplete() function as well as add in to moodle reports.
+
+10.  Google Analytics
+- Add google analytics code to HTML file to track total time viewing, score, video analytics, etc.
 
 CSS
 1. Clean up all current CSS code with comments for updating later.
