@@ -21,7 +21,8 @@ JAVASCRIPT
 -Need to figure out how to differentiate learning objective html files eventhough they are using the same scripts.js file.  Perhaps move all progress bar code to local HTML file.
 
 4. Highlithing Function (IN PROGRESS)
-- Matt currently working on and looking into local storage option.
+- Has been implemented into index.html.
+- Currently stores in local storage between different page/content block loads but does not save when reopening the page.
 
 5. Search Function:
 
@@ -32,6 +33,11 @@ JAVASCRIPT
 - Create buttons for launching each chapter.
 - Create progress bars for each chapter displayed above each button using the local storage variables.
 - Create an image rotator with exercise images and perhaps adds.
+
+8. Quiz Function
+- Develop new HTML template with a quiz function.
+- Quiz should use XML to import text and answers from existing moodle XML files.  That way we do not need to rewrite all quiz items.
+- Develop CSS styles and media queries to make quiz look nice.
 
 CSS
 1. Clean up all current CSS code with comments for updating later.
