@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NASM Course Template</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/styles1.css" rel="stylesheet" type="text/css">
+<link href="css/video-js.css" rel="stylesheet">
+<link href="css/video-styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/progressbar.min.js"></script>
+
+	
+</head>
+<body>
+
+<!-- Main Body -->
+<div class="container-fluid" style="width:85%; margin-top: 100px;">
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress1"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 1</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress2"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 2</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress3"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 3</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress4"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 4</a> 
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress5"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 5</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress6"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 6</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress7"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 7</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress8"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 8</a> 
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress9"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 9</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress10"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 10</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress11"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 11</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress12"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 12</a> 
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-lg-3">
+     <div class="no-print col-lg-12">
+      <div class="progress" value="25" id="chapter_progress13"></div>
+    </div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 13</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress14"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 14</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress15"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 15</a> 
+    </div>
+    <div class="col-lg-3">
+      <div class="progress" value="25" id="chapter_progress16"></div>
+     <a href="/mod/resource/view.php?id=58919" class="btn btn-one btn-block"><i class="icon-white icon-book"></i> Chapter 16</a> 
+    </div>
+  </div>
+	<div class="row" style="margin-bottom: 50px">
+		<div class="col-lg-12">
+			<p style="text-align: center;">Course Progress</p>
+			<div class="progress" value="25" id="course_progress"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			      <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="removeStorage()">DEV Remove Storage</button>
+      			  <button style="height: 15px; width: 100px; font-size: 8px; float: left" class="btn btn-block" onClick="setRandomStorage()">DEV Set Radom Storage</button>
+		</div>
+	</div>
+
+</div>
+<!-- Main Body --> 
+	<script>
+//Chapter and Course Progress
+var chapterProg1 = Number(localStorage.c01ch01);
+var chapterProg2 = Number(localStorage.c01ch02);
+var chapterProg3 = Number(localStorage.c01ch03);
+var chapterProg4 = Number(localStorage.c01ch04);
+var chapterProg5 = Number(localStorage.c01ch05);
+var chapterProg6 = Number(localStorage.c01ch06);
+var chapterProg7 = Number(localStorage.c01ch07);
+var chapterProg8 = Number(localStorage.c01ch08);
+var chapterProg9 = Number(localStorage.c01ch09);
+var chapterProg10 = Number(localStorage.c01ch10);
+var chapterProg11 = Number(localStorage.c01ch11);
+var chapterProg12 = Number(localStorage.c01ch12);
+var chapterProg13 = Number(localStorage.c01ch13);
+var chapterProg14 = Number(localStorage.c01ch14);
+var chapterProg15 = Number(localStorage.c01ch15);
+var chapterProg16 = Number(localStorage.c01ch16);
+var courseProg = Number(localStorage.c01);
+
+
+
+//Dev Function to Remove Local Storage
+function removeStorage() {
+	//alert("Remove Storage");
+	localStorage.removeItem("c01ch01");
+	localStorage.removeItem("c01ch02");
+	localStorage.removeItem("c01ch03");
+	localStorage.removeItem("c01ch04");
+	localStorage.removeItem("c01ch05");
+	localStorage.removeItem("c01ch06");
+	localStorage.removeItem("c01ch07");
+	localStorage.removeItem("c01ch08");
+	localStorage.removeItem("c01ch09");
+	localStorage.removeItem("c01ch10");
+	localStorage.removeItem("c01ch11");
+	localStorage.removeItem("c01ch12");
+	localStorage.removeItem("c01ch13");
+	localStorage.removeItem("c01ch14");
+	localStorage.removeItem("c01ch15");
+	localStorage.removeItem("c01ch16");
+	localStorage.removeItem("c01");
+
+}
+
+//Dev Function to Remove Local Storage
+function setRandomStorage() {
+	//alert("Set Random Storage");
+	localStorage.setItem("c01ch01", 15);
+	localStorage.setItem("c01ch02", 1);
+	localStorage.setItem("c01ch03", 13);
+	localStorage.setItem("c01ch04", 56);
+	localStorage.setItem("c01ch05", 67);
+	localStorage.setItem("c01ch06", 15);
+	localStorage.setItem("c01ch07", 34);
+	localStorage.setItem("c01ch08", 44);
+	localStorage.setItem("c01ch09", 34);
+	localStorage.setItem("c01ch10", 27);
+	localStorage.setItem("c01ch11", 15);
+	localStorage.setItem("c01ch12", 89);
+	localStorage.setItem("c01ch13", 76);
+	localStorage.setItem("c01ch14", 54);
+	localStorage.setItem("c01ch15", 36);
+	localStorage.setItem("c01ch16", 12);
+	localStorage.setItem("c01", 50);
+
+
+}
+
+//Create Progress Bar Function
+function createProgress() {
+
+//alert ("Create Progress");
+	circle1 = new ProgressBar.Line('#chapter_progress1', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+	
+		circle2 = new ProgressBar.Line('#chapter_progress2', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle3 = new ProgressBar.Line('#chapter_progress3', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle4 = new ProgressBar.Line('#chapter_progress4', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle5 = new ProgressBar.Line('#chapter_progress5', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle6 = new ProgressBar.Line('#chapter_progress6', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle7 = new ProgressBar.Line('#chapter_progress7', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle8 = new ProgressBar.Line('#chapter_progress8', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle9 = new ProgressBar.Line('#chapter_progress9', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+
+	});
+
+	
+		circle10 = new ProgressBar.Line('#chapter_progress10', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle11 = new ProgressBar.Line('#chapter_progress11', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle12 = new ProgressBar.Line('#chapter_progress12', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle13 = new ProgressBar.Line('#chapter_progress13', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle14 = new ProgressBar.Line('#chapter_progress14', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle15 = new ProgressBar.Line('#chapter_progress15', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+	
+		circle16 = new ProgressBar.Line('#chapter_progress16', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+	
+			circle17 = new ProgressBar.Line('#course_progress', {
+		color: '#000',
+		easing: 'easeOut',
+		strokeWidth: 8,
+		duration: 1500,
+		text: {
+			value: '0'
+		}
+	});
+
+
+
+	circle1.animate((chapterProg1 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle2.animate((chapterProg2 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle3.animate((chapterProg3 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle4.animate((chapterProg4 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle5.animate((chapterProg5 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle6.animate((chapterProg6 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle7.animate((chapterProg7 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle8.animate((chapterProg8 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle9.animate((chapterProg9 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle10.animate((chapterProg10 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle11.animate((chapterProg11 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle12.animate((chapterProg12 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle13.animate((chapterProg13 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle14.animate((chapterProg14 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle15.animate((chapterProg15 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+		circle16.animate((chapterProg16 / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+	
+			circle17.animate((courseProg / 100), {
+		from: {
+			color: '#fff'
+		},
+		to: {
+			color: '#d1b31b'
+		},
+		step: function (state, circle, bar) {
+			circle.path.setAttribute('stroke', state.color);
+			console.log(circle);
+			circle.setText("Course: " + (circle.value() * 100).toFixed(0) + "%");
+		}
+	});
+
+
+}
+
+createProgress();
+	</script>
+
+
+<!-- Video Player JS --> 
+<script src="js/video.js"></script> 
+<script src="js/videojs-resolution-switcher.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
