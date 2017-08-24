@@ -6,7 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NASM Course Template</title>
 
-<!-- Bootstrap -->
+<!-- Declar a Lesson Number - Must be set for each HTML file -->
+<script>
+	//Declare variables before Scripts.JS File
+	if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("myLessonNumber", "1");	
+} else {
+    // Sorry! No Web Storage support..
+}
+</script>
+
+<!-- Load all CSS and JS Files-->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/styles1.css" rel="stylesheet" type="text/css">
 <link href="css/video-js.css" rel="stylesheet">
@@ -24,6 +34,9 @@
 <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 
 <script>
+	//Declar Leaning Objective Number for use in JS File
+	var learningObjectiveNum = 1;
+	var lessonLengthNum = 10;
 		//MaSHa Functions
 		// if jQuery is not available
 			if (window.addEventListener) {
@@ -53,6 +66,7 @@
 				}
 
     </script>
+
 </head>
 <body>
 
@@ -118,86 +132,10 @@
 
 <!-- Anything in selectable-conent class is able to be highlighted-->
 <div id="selectable-content"> 
-  <!-- Content Section -->
-  <div class ="PortSwap active" id="Content1"> 
-    <!-- Add Padding to accomodate menu but hide in print-->
-    <div class="row no-print" style="padding-top:45px;"></div>
-    <div class="row"> 
-      <!-- Top Header and Page Toolbar-->
-      <div class="col-lg-9">
-        <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 1</div>
-      </div>
-    </div>
-    <!-- Main Content Row -->
-    <div class="row">
-      <div class="col-lg-9 col-md-9 col-sm-12">
-        <div class="left-section">
-          <div class="content-h3">The Prevalence of Obesity</div>
-          <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
-          <div class="content-h2">History of the Fitness Industry</div>
-          <div class="content-p">
-            <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</p>
-            <p>In the 1960s, women’s fitness centers, or “figure salons,” became a popular trend. Unlike male-oriented gyms, where the focus was on developing muscle size and strength, women’s fitness centers typically focused on weight loss and physique improvement. Instead of barbells and dumbbells, most exercise machines in women’s fitness centers were passive and focused on “spot reduction.” For example, a rolling machine was used to “roll away fat” or a mechanical </p>
-          </div>
-          <!--        <div class="printOnly" style="height:320px;"></div>-->
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-md-offset-2 col-md-8">
-              <div class="wrapper">
-                <div class="videocontent no-print">
-                  <div class="p3sdk-container p3sdk-debug" player_id="video1" player_type="videojs">
-                    <video id="video1" class="video-js vjs-16-9 vjs-default-skin" controls preload="auto" width="640" height="264"  data-setup='{"fluid": true}'> 
-                      <!--Insert SD Video URL-->
-                      <source src="http://production.smedia.lvp.llnw.net/c795395f130d4737be848be06f52ea62/bB/ccWC5ymezYF6CL4G2iqRVaYu5vTLjVE5y6MxVDsJo/nasm_cpt_cueing_1-1.mp4?x=0&h=9afcbf93f68867fb14c476d1b83a2693" type='video/mp4' label='480 SD' res='480' />
-                      <!--Insert HD Video URL-->
-                      <source src="http://production.smedia.lvp.llnw.net/c795395f130d4737be848be06f52ea62/bp/nUpBpRO5yib1oirJ3YkzSXXa_JKgFPvcOcA09dWNg/nasm_cpt_cueing_1-1.mp4?x=0&h=c171439f4d170f56dcbd1ceb7526d74f" type='video/mp4' label='720 HD' res='720'/>
-                      
-                      <!--Insert Closed Captioning URL-->
-                      <track label="English" kind="captions" srclang="en" src="/file.php/10190/_CC/NASM_CPT_Cueing_1.1.vtt"/>
-                      <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
-                    </video>
-                    <div class="transcript"> 
-                      <!--Insert Closed Captioning File ID and Project ID-->
-                      <div class="p3sdk-interactive-transcript" file_id="1206310" project_id="19164">
-                        <button style="margin-bottom:15px; margin-top:15px;" class="p3sdk-interactive-transcript-toggle-keywords-button btn btn-primary"> Highlight Keyword </button>
-                        <button style="margin-bottom:15px; margin-top:15px;" class="p3sdk-interactive-transcript-download btn btn-primary" title="Download Transcript" download_format="pdf"> Download/Print Transcript </button>
-                        <input type="text" value="Search" class="p3sdk-interactive-transcript-searchbox"/>
-                        <div class="p3sdk-interactive-transcript-progressbar" search_result_marker="*">
-                          <div class="p3sdk-interactive-transcript-progress"></div>
-                        </div>
-                        <div class="p3sdk-interactive-transcript-content"> </div>
-                        <div class="p3sdk-interactive-transcript-collapse-visible" style="text-align:center;"> <a href="javascript:void(0);" accesskey="1" style="color:blue;font-size:1.2em; width:100%; margin-top:15px; margin-bottom:5px; text-decoration:underline; text-align:center;" class="p3sdk-interactive-transcript-collapse p3sdk-collapse-onload icon-expand" label_when_expanded = "Hide Interactive Transcript" label_when_collapsed = "Show Interactive Transcript"> Hide Interactive Transcript</a><br>
-                          <p style="font-size:0.8em; text-align:center;">Optional: Click ALT or COMMAND 1 to enable</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-12">
-        <div class="right-section-bar1">Continuing Education</div>
-        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
-        <div class="right-section-bar1">Continuing Education</div>
-        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
-        <div class="right-section-boxhead1">TRAINER TIPS</div>
-        <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
-      </div>
-    </div>
-    <!-- Footer Row -->
-    <hr style="clear:both; visibility: hidden;">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="my-footer">Text </div>
-      </div>
-    </div>
-  </div>
-  <!-- Content Section --> 
+
   
   <!-- Content Section -->
-  <div class ="PortSwap" id="Content2"> 
+  <div class ="PortSwap active" id="Content1"> 
     <!-- Add Padding to accomodate menu but hide in print-->
     <div class="row no-print" style="padding-top:45px;"></div>
     <div class="row"> 
@@ -244,6 +182,85 @@
     </div>
   </div>
   <!-- Content Section -->
+  
+    <!-- Content Section -->
+  <div class ="PortSwap" id="Content2"> 
+    <!-- Add Padding to accomodate menu but hide in print-->
+    <div class="row no-print" style="padding-top:45px;"></div>
+    <div class="row"> 
+      <!-- Top Header and Page Toolbar-->
+      <div class="col-lg-9">
+        <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 1</div>
+      </div>
+    </div>
+    <!-- Main Content Row -->
+    <div class="row">
+      <div class="col-lg-9 col-md-9 col-sm-12">
+        <div class="left-section">
+          <div class="content-h3">The Prevalence of Obesity</div>
+          <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
+          <div class="content-h2">History of the Fitness Industry</div>
+          <div class="content-p">
+            <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</p>
+            <p>In the 1960s, women’s fitness centers, or “figure salons,” became a popular trend. Unlike male-oriented gyms, where the focus was on developing muscle size and strength, women’s fitness centers typically focused on weight loss and physique improvement. Instead of barbells and dumbbells, most exercise machines in women’s fitness centers were passive and focused on “spot reduction.” For example, a rolling machine was used to “roll away fat” or a mechanical </p>
+          </div>
+          <!--        <div class="printOnly" style="height:320px;"></div>-->
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-md-offset-2 col-md-8">
+              <!--  
+               <div class="wrapper">
+                <div class="videocontent no-print">
+                  <div class="p3sdk-container p3sdk-debug" player_id="video1" player_type="videojs">
+                    <video id="video1" class="video-js vjs-16-9 vjs-default-skin" controls preload="auto" width="640" height="264"  data-setup='{"fluid": true}'> 
+
+                      <source src="http://production.smedia.lvp.llnw.net/c795395f130d4737be848be06f52ea62/bB/ccWC5ymezYF6CL4G2iqRVaYu5vTLjVE5y6MxVDsJo/nasm_cpt_cueing_1-1.mp4?x=0&h=9afcbf93f68867fb14c476d1b83a2693" type='video/mp4' label='480 SD' res='480' />
+
+                      <source src="http://production.smedia.lvp.llnw.net/c795395f130d4737be848be06f52ea62/bp/nUpBpRO5yib1oirJ3YkzSXXa_JKgFPvcOcA09dWNg/nasm_cpt_cueing_1-1.mp4?x=0&h=c171439f4d170f56dcbd1ceb7526d74f" type='video/mp4' label='720 HD' res='720'/>
+                      
+
+                      <track label="English" kind="captions" srclang="en" src="/file.php/10190/_CC/NASM_CPT_Cueing_1.1.vtt"/>
+                      <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
+                    </video>
+                    <div class="transcript"> 
+                      <div class="p3sdk-interactive-transcript" file_id="1206310" project_id="19164">
+                        <button style="margin-bottom:15px; margin-top:15px;" class="p3sdk-interactive-transcript-toggle-keywords-button btn btn-primary"> Highlight Keyword </button>
+                        <button style="margin-bottom:15px; margin-top:15px;" class="p3sdk-interactive-transcript-download btn btn-primary" title="Download Transcript" download_format="pdf"> Download/Print Transcript </button>
+                        <input type="text" value="Search" class="p3sdk-interactive-transcript-searchbox"/>
+                        <div class="p3sdk-interactive-transcript-progressbar" search_result_marker="*">
+                          <div class="p3sdk-interactive-transcript-progress"></div>
+                        </div>
+                        <div class="p3sdk-interactive-transcript-content"> </div>
+                        <div class="p3sdk-interactive-transcript-collapse-visible" style="text-align:center;"> <a href="javascript:void(0);" accesskey="1" style="color:blue;font-size:1.2em; width:100%; margin-top:15px; margin-bottom:5px; text-decoration:underline; text-align:center;" class="p3sdk-interactive-transcript-collapse p3sdk-collapse-onload icon-expand" label_when_expanded = "Hide Interactive Transcript" label_when_collapsed = "Show Interactive Transcript"> Hide Interactive Transcript</a><br>
+                          <p style="font-size:0.8em; text-align:center;">Optional: Click ALT or COMMAND 1 to enable</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="right-section-bar1">Continuing Education</div>
+        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
+        <div class="right-section-bar1">Continuing Education</div>
+        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
+        <div class="right-section-boxhead1">TRAINER TIPS</div>
+        <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
+      </div>
+    </div>
+    <!-- Footer Row -->
+    <hr style="clear:both; visibility: hidden;">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="my-footer">Text </div>
+      </div>
+    </div>
+  </div>
+  <!-- Content Section --> 
   
   <div class ="PortSwap no-print" id="Content3">
     <div class="row" style="margin-top:50px;">
@@ -488,6 +505,16 @@
 </div>
 <!-- Footer Row -->
 
+<script>
+	//This Script will figure out how many content pages there are and
+	//Store that number into localStorage to be pulled in the Scripts.JS file
+	var numPages = $('.PortSwap').length;
+	if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("myNumPages", numPages);
+} else {
+    // Sorry! No Web Storage support..
+}
+</script>
 
 <!-- Video Player JS --> 
 <script src="js/video.js"></script> 
