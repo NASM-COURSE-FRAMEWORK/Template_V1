@@ -66,7 +66,7 @@ $(document).ready(function () {
 
 
 //Lesson Length
-var lessonLength = 10;
+var lessonLength = localStorage.myNumPages;
 //Chapter Length
 var chapterLength = 50;
 //Course Length
@@ -76,18 +76,17 @@ var courseLength = 452;
 
 //Declare Progress Bar Variables and Store them Locally.
 if (typeof(Storage) !== "undefined") {
+
 	//Check if Lesson is Set to Zero.
 	//Update Lesson Local Storate ID Per Lesson
 	//alert(localStorage.c01ch01l01);
-	if (localStorage.c01ch01l01 === undefined)
+	if (localStorage.c01ch01 === undefined)
 		{
-			//alert("undefined");
 			localStorage.setItem("c01ch01", [1/chapterLength*100]);
-			//Update Lesson Local Storate ID Per Lesson
 			localStorage.setItem("c01ch01l01", [1/lessonLength*100]);
 			localStorage.setItem("c01", [1/courseLength*100]);
 		}
-	else if (localStorage.c01ch01l01 > 1) {
+	else if (localStorage.c01ch01 > 1) {
 		//alert("less than 1");
 
 	}
