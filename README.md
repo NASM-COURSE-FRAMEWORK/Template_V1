@@ -50,6 +50,10 @@ JAVASCRIPT
 10.  Google Analytics
 - Add google analytics code to HTML file to track total time viewing, score, video analytics, etc.
 
+11.  Misc Funtions:
+- Create function to switch the left and right columns like a textbook.  Each page may contain some additional tool tips and if you look at a textbook those tool tips should be located on the left for a left page and on the right with a right page.  We can accomplish this by adding or appending a "lg-pull-left-3" to the main column div.  Perhaps we do this if any of those column classes have the word "left" in it.
+- Create function to add the current page number to the footer section located on the right side of the screen.  This should only be visible in the print CSS.
+
 CSS
 1. Clean up all current CSS code with comments for updating later.
 2. Create Print CSS and make sure all content divs are displayed when selecting the print option.
