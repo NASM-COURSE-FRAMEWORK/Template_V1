@@ -6,10 +6,11 @@ var linksLinksArray = [];
 var xmlMenu = "data/c01ch01menu.xml";
 var xmlData = "data/c01ch01data.xml";
 var newID, $activeEl, contentID, $activeLi;
+var lessonLength = 0;
+var chapterLength, courseLength,lessonProg, courseProg, chapterProg;
 
 $(document).ready(function () {
-	//Create Progress bars
-	createProgress();
+	"use strict";
 	//Load Data XML into Arrays
 	$.ajax({
 		type: "POST",
@@ -25,6 +26,10 @@ $(document).ready(function () {
 			});
 			//Assign New ID text
 			newID = settingsArray[3] + "p";
+			//Lesson Length
+			
+			chapterLength = settingsArray[1];
+			courseLength = settingsArray[2];
 			//Load All Paragraphs Content Into Array
 			$(xml).find('course').find('content').find('paragraphs').find('item').each(function () {
 				var temp = $(this).text();
@@ -39,8 +44,9 @@ $(document).ready(function () {
 			//Assign new Class ID's to Content Divs based on XML settings
 			var numContentBlocks = $('.PortSwap').length;
 			for (var i = 1; i <= numContentBlocks; i++) {
+				lessonLength = lessonLength + 1;
 				document.getElementById("Content" + i).id = newID + i;
-				document.getElementById("PageSwap" + i).id =newID + i + "Num";
+				document.getElementById("PageSwap" + i).id = newID + i + "Num";
 			}
 
 			//Determine First Page based on Local Storage.  Assign Content Page and Pagination Number
@@ -61,7 +67,32 @@ $(document).ready(function () {
 			$(cPage).addClass('active').hide().fadeIn(250);
 			$(cPageNum).addClass('active');
 
+			//Declare Progress Bar Variables and Store them Locally.
+			if (typeof (Storage) !== "undefined") {
 
+				if ((localStorage.c01ch01l01 === undefined) || (localStorage.c01ch01l01 === null)) {
+					// Lesson Progress
+					//Update Lesson,Chapter Local Storage ID Per Lesson
+					lessonProg = (1 / lessonLength) * 100;
+					chapterProg = (1 / chapterLength) * 100;
+					courseProg = (1 / courseLength) * 100;
+					localStorage.setItem("c01ch01", [1 / chapterLength * 100]);
+					localStorage.setItem("c01ch01l01", [1 / lessonLength * 100]);
+					localStorage.setItem("c01", [1 / courseLength * 100]);
+				}
+				else
+					{
+					lessonProg = Number(localStorage.c01ch01l01);
+					chapterProg = Number(localStorage.c01ch01);
+					courseProg = Number(localStorage.c01);
+					}
+			} else {
+				// Sorry! No Web Storage support..
+				alert("No Local Storage");
+			}
+			
+			//Run Create Progress after all Variables are Defined
+			createProgress();
 		},
 		error: function () {
 			console.log("Failed");
@@ -147,56 +178,9 @@ $(document).ready(function () {
 
 	videojs('video1').videoJsResolutionSwitcher();
 
-
 });
 
 
-
-//Config For Learning Objective Variables. 
-//Lesson Set Item must be Unique per Learning Objective.
-//Chapter Set Item must be unique per SCORM file or Chapter
-// USE FIND AND REPLACE TO UPDATE ALL LESSON AND CHAPTER ID'S.
-
-
-//Lesson Length
-var lessonLength = localStorage.myNumPages;
-//Chapter Length
-var chapterLength = 50;
-//Course Length
-var courseLength = 452;
-
-
-
-//Declare Progress Bar Variables and Store them Locally.
-if (typeof (Storage) !== "undefined") {
-
-	//Check if Lesson is Set to Zero.
-	//Update Lesson Local Storate ID Per Lesson
-	//alert(localStorage.c01ch01l01);
-	if (localStorage.c01ch01l01 === undefined) {
-		localStorage.setItem("c01ch01", [1 / chapterLength * 100]);
-		localStorage.setItem("c01ch01l01", [1 / lessonLength * 100]);
-		localStorage.setItem("c01", [1 / courseLength * 100]);
-	} else if (localStorage.c01ch01l01 > 1) {
-		localStorage.setItem("c01ch01", [1 / chapterLength * 100]);
-		localStorage.setItem("c01ch01l01", [1 / lessonLength * 100]);
-		localStorage.setItem("c01", [1 / courseLength * 100]);
-
-	}
-} else {
-	// Sorry! No Web Storage support..
-	alert("No Local Storage");
-}
-
-// Lesson Progress
-//Update Lesson,Chapter Local Storate ID Per Lesson
-var lessonProg = Number(localStorage.c01ch01l01);
-
-//Chapter Progress
-var chapterProg = Number(localStorage.c01ch01);
-
-//Course Progress
-var courseProg = Number(localStorage.c01);
 
 
 
@@ -287,7 +271,7 @@ function createProgress() {
 
 //Update Progress Bar
 function updateProgress() {
-
+	"use strict";
 	//var value = ($(this).attr('value') / 100);
 	var startColor = '#FC5B3F';
 	var endColor = ($(this).attr('pColor'));
@@ -341,13 +325,15 @@ function runProgressBar() {
 	//Lesson will stop before 100 percent and wait for Interactivity Completed
 	//Chapter will stop before 100 percent and wait for Quiz Completed
 	//Course will stop before 100 percent and wait for All Quizzes Completed
+	"use strict";
 	if (lessonProg < (100 - ((1 / lessonLength) * 100))) {
 		lessonProg = (lessonProg + ((1 / lessonLength) * 100) - 1);
 		updateProgress();
+
 		//Store new calculations into Local Storage
 		if (typeof (Storage) !== "undefined") {
 			//Update Lesson Local Storate ID Per Lesson
-			localStorage.c01ch01l01 = lessonProg;
+			localStorage.setItem("c01ch01l01", lessonProg);
 
 		} else {
 			// Sorry! No Web Storage support..
