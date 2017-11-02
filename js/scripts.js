@@ -1,24 +1,114 @@
+var settingsArray = [];
+var paragraphsArray = [];
+var headersArray = [];
+var linksNameArray = [];
+var linksLinksArray = [];
+var xmlMenu = "data/c01ch01menu.xml";
+var xmlData = "data/c01ch01data.xml";
+var newID, $activeEl, contentID, $activeLi;
+
 $(document).ready(function () {
 	//Create Progress bars
 	createProgress();
-	//Load English XML into Elements
+	//Load Data XML into Arrays
 	$.ajax({
-		url: 'data/english.xml',
-		dataType: 'xml',
-		success: function (data) {
+		type: "POST",
+		url: xmlData,
+		dataType: "xml",
+		success: function (xml) {
 			//If XML loaded successfuly fade in the Container
 			$("#main_container").removeAttr("style").hide().fadeIn(250);
-			//Load Content Blocks into Element ID's
-			$(data).find('manifest content').each(function (index) {
-				var temp1;
-				temp1 = "text" + index;
-				var block1 = $(this).find('block').text();
-				document.getElementById(temp1).innerHTML = block1;
+			//Load All Course Settings Into Array
+			$(xml).find('course').find('settings').find('item').each(function () {
+				var temp = $(this).text();
+				settingsArray.push(temp);
 			});
-			//Load Lesson Title into Element ID's
-			$(data).find('manifest').each(function () {
-				var block2 = $(this).find('title').text();
-				$(".page-header").append(block2);
+			//Assign New ID text
+			newID = settingsArray[3] + "p";
+			//Load All Paragraphs Content Into Array
+			$(xml).find('course').find('content').find('paragraphs').find('item').each(function () {
+				var temp = $(this).text();
+				paragraphsArray.push(temp);
+			});
+			//Load All Headers Content Into Array
+			$(xml).find('course').find('content').find('headers').find('item').each(function () {
+				var temp = $(this).text();
+				headersArray.push(temp);
+			});
+
+			//Assign new Class ID's to Content Divs based on XML settings
+			var numContentBlocks = $('.PortSwap').length;
+			for (var i = 1; i <= numContentBlocks; i++) {
+				document.getElementById("Content" + i).id = newID + i;
+				document.getElementById("PageSwap" + i).id =newID + i + "Num";
+			}
+
+			//Determine First Page based on Local Storage.  Assign Content Page and Pagination Number
+			var cPage, cPageNum;
+			if ((localStorage.getItem("myPage") === null) || (localStorage.getItem("myPage") === undefined)) {
+				cPage = "#" + newID + "1";
+				cPageNum = "#" + newID + "1Num";
+				//Assign myPage into Local Storage
+				localStorage.setItem("myPage", cPage);
+				localStorage.setItem("myPageNum", cPageNum);
+			} else {
+				cPage = localStorage.getItem("myPage");
+				cPageNum = localStorage.getItem("myPageNum");
+
+			}
+
+			//Go to First Page
+			$(cPage).addClass('active').hide().fadeIn(250);
+			$(cPageNum).addClass('active');
+
+
+		},
+		error: function () {
+			console.log("Failed");
+		}
+	});
+
+	$.ajax({
+		type: "POST",
+		url: xmlMenu,
+		dataType: "xml",
+		success: function (xml) {
+			//Load All menu Item and Links Into Array
+			$(xml).find('course').each(function () {
+				$(this).find('menu').each(function () {
+					var index = 1;
+					var index2 = 1;
+					var m, n;
+					var y = 0;
+					//Store Links into 2D Array
+					$(xml).find('option').each(function () {
+						var tempArray = [];
+						$(this).find('item').each(function () {
+							tempArray.push($(this).attr('link'));
+						});
+						linksLinksArray.push(tempArray);
+					});
+					//Store Link Name into 2D Array
+					$(xml).find('option').each(function () {
+						var tempArray = [];
+						$(this).find('item').each(function () {
+							tempArray.push($(this).text());
+						});
+						linksNameArray.push(tempArray);
+					});
+					//Set Menu Headers and Add Links according to XML
+					$(this).find('option').each(function () {
+						m = "menuHeader" + index;
+						n = "#menu" + index2;
+						index = index + 1;
+						index2 = index2 + 1;
+						document.getElementById(m).innerHTML = ($(this).attr("desc"));
+						$(this).find('item').each(function (x) {
+							$(n).append('<li><a href=' + linksLinksArray[y][x] + '>' + linksNameArray[y][x] + '</a></li>');
+						});
+						y = y + 1;
+					});
+				});
 			});
 		},
 		error: function () {
@@ -26,13 +116,15 @@ $(document).ready(function () {
 		}
 	});
 
+
 	//load pagination based on number of content divs
 	var numContentBlocks = $('.PortSwap').length;
-	
 
 	for (var i = 1; i <= numContentBlocks; i++) {
-		$('#mainPagination').append('<li class="PageSwap' + ((i == 1) ? ' active' : '') + '"><a href="#" id="page_' + i + '">' + i + '</a></li>');
+
+		$('#mainPagination').append('<li id="PageSwap' + i + '"  class="PageSwap"><a href="#" id="page_' + i + '">' + i + '</a></li>');
 	}
+
 
 	$('.prevNextBtn').click(function () {
 		//Run Progress Bar Update.  Must only run once per Content Page
@@ -46,6 +138,7 @@ $(document).ready(function () {
 	});
 
 
+
 	//SCORM Intitialization
 	//Declare Scorm Variables
 	var scorm = pipwerks.SCORM; //Shortcut
@@ -54,7 +147,7 @@ $(document).ready(function () {
 
 	videojs('video1').videoJsResolutionSwitcher();
 
-	
+
 });
 
 
@@ -75,23 +168,23 @@ var courseLength = 452;
 
 
 //Declare Progress Bar Variables and Store them Locally.
-if (typeof(Storage) !== "undefined") {
+if (typeof (Storage) !== "undefined") {
 
 	//Check if Lesson is Set to Zero.
 	//Update Lesson Local Storate ID Per Lesson
 	//alert(localStorage.c01ch01l01);
-	if (localStorage.c01ch01 === undefined)
-		{
-			localStorage.setItem("c01ch01", [1/chapterLength*100]);
-			localStorage.setItem("c01ch01l01", [1/lessonLength*100]);
-			localStorage.setItem("c01", [1/courseLength*100]);
-		}
-	else if (localStorage.c01ch01 > 1) {
-		//alert("less than 1");
+	if (localStorage.c01ch01l01 === undefined) {
+		localStorage.setItem("c01ch01", [1 / chapterLength * 100]);
+		localStorage.setItem("c01ch01l01", [1 / lessonLength * 100]);
+		localStorage.setItem("c01", [1 / courseLength * 100]);
+	} else if (localStorage.c01ch01l01 > 1) {
+		localStorage.setItem("c01ch01", [1 / chapterLength * 100]);
+		localStorage.setItem("c01ch01l01", [1 / lessonLength * 100]);
+		localStorage.setItem("c01", [1 / courseLength * 100]);
 
 	}
 } else {
-    // Sorry! No Web Storage support..
+	// Sorry! No Web Storage support..
 	alert("No Local Storage");
 }
 
@@ -158,7 +251,7 @@ function createProgress() {
 		},
 		step: function (state, circle, bar) {
 			circle.path.setAttribute('stroke', state.color);
-			console.log(circle);
+			//console.log(circle);
 			circle.setText("Learning Objective: " + (circle.value() * 100).toFixed(0) + "%");
 		}
 	});
@@ -172,7 +265,7 @@ function createProgress() {
 		},
 		step: function (state, circle, bar) {
 			circle.path.setAttribute('stroke', state.color);
-			console.log(circle);
+			//console.log(circle);
 			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
 		}
 	});
@@ -186,7 +279,7 @@ function createProgress() {
 		},
 		step: function (state, circle, bar) {
 			circle.path.setAttribute('stroke', state.color);
-			console.log(circle);
+			//console.log(circle);
 			circle.setText("Course: " + (circle.value() * 100).toFixed(0) + "%");
 		}
 	});
@@ -207,7 +300,7 @@ function updateProgress() {
 		},
 		step: function (state, circle, bar) {
 			circle.path.setAttribute('stroke', state.color);
-			console.log(circle);
+			//console.log(circle);
 			circle.setText("Learning Objective: " + (circle.value() * 100).toFixed(0) + "%");
 		}
 	});
@@ -221,7 +314,7 @@ function updateProgress() {
 		},
 		step: function (state, circle, bar) {
 			circle.path.setAttribute('stroke', state.color);
-			console.log(circle);
+			//console.log(circle);
 			circle.setText("Chapter: " + (circle.value() * 100).toFixed(0) + "%");
 		}
 	});
@@ -234,7 +327,7 @@ function updateProgress() {
 		},
 		step: function (state, circle, bar) {
 			circle.path.setAttribute('stroke', state.color);
-			console.log(circle);
+			//console.log(circle);
 			circle.setText("Course: " + (circle.value() * 100).toFixed(0) + "%");
 		}
 	});
@@ -254,7 +347,7 @@ function runProgressBar() {
 		//Store new calculations into Local Storage
 		if (typeof (Storage) !== "undefined") {
 			//Update Lesson Local Storate ID Per Lesson
-			localStorage.c01ch01l01= lessonProg;
+			localStorage.c01ch01l01 = lessonProg;
 
 		} else {
 			// Sorry! No Web Storage support..
@@ -299,7 +392,7 @@ function finishedInt() {
 	updateProgress();
 	if (typeof (Storage) !== "undefined") {
 		//Update Lesson Local Storate ID Per Lesson
-		localStorage.c01ch01l01= lessonProg;
+		localStorage.c01ch01l01 = lessonProg;
 
 	} else {
 		// Sorry! No Web Storage support..
@@ -389,6 +482,7 @@ function setComplete() {
 	lmsConnected = scorm.init();
 	if (lmsConnected) {
 		//This line will set Course to Complete
+		//scorm.set("cmi.core.total_time");
 		var success = scorm.set("cmi.core.lesson_status", "completed");
 		//Use this line to set a Score
 		//pipwerks.SCORM.data.set("cmi.core.score.raw",scorm_total);
@@ -418,44 +512,84 @@ $(function () {
 });
 
 function prevNext(btn) {
+	"use strict";
 	//check to see if the click is one to a pagination element or prev/next
 	var navClickType = btn.prop('nodeName');
 	//remove the active class from the currently active pagination element
-	var $activeLi = $('.pagination').find("li.active");
+
+	$activeLi = $('.pagination').find("li.active");
 	$activeLi.removeClass('active');
 
-	var current = $('.PortSwap.active')
+	var current = $('.PortSwap.active');
 	var next = current.next('.PortSwap');
 	var prev = current.prev('.PortSwap');
+
 	current.hide().removeClass('active');
-	if (navClickType == 'A') { //actions if prev/next is clicked
+	if (navClickType === 'A') { //actions if prev/next is clicked
 		var theID = btn.attr('id');
 		var direction = theID.split('arrow')[1];
-		if (direction == 'Prev') {
+		if (direction === 'Prev') {
 			if (prev.length) {
 				current.hide().removeClass('active');
 				prev.addClass('active').hide().fadeIn(250);
 			}
 			if ($activeLi.prev().length > 0) {
 				$activeLi.prev().addClass('active');
+				//Find New Active Page Number
+				$activeLi = $('.pagination').find("li.active");
+				$activeEl = $('.pagination').find("li.active");
+				contentID = "#" + newID + $activeEl.find('a').attr('id').split('_')[1];
+				assignPageToStorage();
 			} else {
 				$('.pagination').find("li:last").addClass("active");
 			}
-		} else if (direction == 'Next') {
+
+
+
+		} else if (direction === 'Next') {
 			if (next.length) {
 				current.hide().removeClass('active');
 				next.addClass('active').hide().fadeIn(250);
 			}
 			if ($activeLi.next().length > 0) {
 				$activeLi.next().addClass('active');
+				//Find New Active Page Number
+				$activeLi = $('.pagination').find("li.active");
+				$activeEl = $('.pagination').find("li.active");
+				contentID = "#" + newID + $activeEl.find('a').attr('id').split('_')[1];
+				assignPageToStorage();
 			} else {
 				$('.pagination').find("li:first").addClass("active");
 			}
 		}
+
 	} else { //actions if pagination element is clicked
 		btn.addClass('active');
 		$activeEl = $('.pagination').find("li.active");
-		var contentID = '#Content' + $activeEl.find('a').attr('id').split('_')[1];
+		contentID = "#" + newID + $activeEl.find('a').attr('id').split('_')[1];
 		$(contentID).addClass('active').hide().fadeIn(250);
+		$activeLi = $('.pagination').find("li.active");
+		assignPageToStorage();
+
+	}
+}
+
+function assignPageToStorage() {
+	"use strict";
+
+	//Set Current Page into Local Storage
+	if (typeof (Storage) !== "undefined") {
+		if (localStorage.myPage === undefined) {
+			localStorage.setItem("myPageNum", newID + "1Num");
+			localStorage.setItem("myPage", "#" + newID + "1");
+		} else {
+			//alert($activeLi.attr('id'));
+			localStorage.setItem("myPage", contentID);
+			localStorage.setItem("myPageNum", "#" + $activeLi.attr('id'));
+
+		}
+	} else {
+		// Sorry! No Web Storage support..
+		alert("No Local Storage");
 	}
 }
