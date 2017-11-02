@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<course>
+  <settings>
+    <item id="0-lesson_start_progress">0</item>
+    <item id="1-chapter-pages-number">30</item>
+    <item id="2-number-of-chapters">16</item>
+    <item id="3-course-page-id">c01ch01l01</item>
+  </settings>
+  <content>
+    <headers>
+      <item id="0">Header 0</item>
+      <item id="1">Header 1</item>
+      <item id="2">Header 2</item>
+      <item id="3">Header 3</item>
+      <item id="4">Header 4</item>
+    </headers>
+    <paragraphs>
+      <item id="0">INSERT CONTENT 0</item>
+      <item id="1">INSERT CONTENT 1</item>
+      <item id="2">INSERT CONTENT 2</item>
+      <item id="3">INSERT CONTENT 3</item>
+      <item id="4">INSERT CONTENT 4</item>
+      <item id="5">INSERT CONTENT 5</item>
+      <item id="6">INSERT CONTENT 6</item>
+      <item id="7">INSERT CONTENT 7</item>
+      <item id="8">INSERT CONTENT 8</item>
+    </paragraphs>
+  </content>
+  <tables>
+    <table desc="Table5x3">
+      <item desc="Header">Header 1</item>
+      <item desc="Header">Header 2</item>
+      <item desc="Header">Header 3</item>
+      <item desc="Header">Header 4</item>
+      <item desc="Header">Header 5</item>
+      <item desc="Cell">Cell Text 1</item>
+      <item desc="Cell">Cell Text 2</item>
+      <item desc="Cell">Cell Text 3</item>
+      <item desc="Cell">Cell Text 4</item>
+      <item desc="Cell">Cell Text 5</item>
+      <item desc="Cell">Cell Text 6</item>
+      <item desc="Cell">Cell Text 7</item>
+      <item desc="Cell">Cell Text 8</item>
+      <item desc="Cell">Cell Text 9</item>
+      <item desc="Cell">Cell Text 10</item>
+      <item desc="Cell">Cell Text 11</item>
+      <item desc="Cell">Cell Text 12</item>
+      <item desc="Cell">Cell Text 13</item>
+      <item desc="Cell">Cell Text 14</item>
+      <item desc="Cell">Cell Text 15</item>
+    </table>
+    <table desc="Table5x3">
+      <item desc="Header">Header 1</item>
+      <item desc="Header">Header 2</item>
+      <item desc="Header">Header 3</item>
+      <item desc="Header">Header 4</item>
+      <item desc="Header">Header 5</item>
+      <item desc="Cell">Cell Text 1</item>
+      <item desc="Cell">Cell Text 2</item>
+      <item desc="Cell">Cell Text 3</item>
+      <item desc="Cell">Cell Text 4</item>
+      <item desc="Cell">Cell Text 5</item>
+      <item desc="Cell">Cell Text 6</item>
+      <item desc="Cell">Cell Text 7</item>
+      <item desc="Cell">Cell Text 8</item>
+      <item desc="Cell">Cell Text 9</item>
+      <item desc="Cell">Cell Text 10</item>
+      <item desc="Cell">Cell Text 11</item>
+      <item desc="Cell">Cell Text 12</item>
+      <item desc="Cell">Cell Text 13</item>
+      <item desc="Cell">Cell Text 14</item>
+      <item desc="Cell">Cell Text 15</item>
+    </table>
+    <table desc="Table5x3">
+      <item desc="Header">Header 1</item>
+      <item desc="Header">Header 2</item>
+      <item desc="Header">Header 3</item>
+      <item desc="Header">Header 4</item>
+      <item desc="Header">Header 5</item>
+      <item desc="Cell">Cell Text 1</item>
+      <item desc="Cell">Cell Text 2</item>
+      <item desc="Cell">Cell Text 3</item>
+      <item desc="Cell">Cell Text 4</item>
+      <item desc="Cell">Cell Text 5</item>
+      <item desc="Cell">Cell Text 6</item>
+      <item desc="Cell">Cell Text 7</item>
+      <item desc="Cell">Cell Text 8</item>
+      <item desc="Cell">Cell Text 9</item>
+      <item desc="Cell">Cell Text 10</item>
+      <item desc="Cell">Cell Text 11</item>
+      <item desc="Cell">Cell Text 12</item>
+      <item desc="Cell">Cell Text 13</item>
+      <item desc="Cell">Cell Text 14</item>
+      <item desc="Cell">Cell Text 15</item>
+    </table>
+  </tables>
+  <interactive></interactive>
+</course>
