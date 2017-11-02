@@ -10,7 +10,7 @@
 <script>
 	//Declare variables before Scripts.JS File
 	if (typeof(Storage) !== "undefined") {
-    localStorage.setItem("myLessonNumber", "1");	
+    localStorage.setItem("currentLesson", "c01ch01l01");
 } else {
     // Sorry! No Web Storage support..
 }
@@ -81,25 +81,20 @@
           </div>
           <div class="collapse navbar-collapse navbar-menubuilder">
             <ul class="nav navbar-nav">
-              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learning Objectives <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#Obj1">Objective One</a></li>
-                  <li><a href="#">Objective Two</a></li>
-                  <li><a href="#">Objective Three</a></li>
+				<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader1">Learning Objectives</span> <span class="caret"></span></a>
+                <ul class="dropdown-menu" id="menu1">
                 </ul>
               </li>
-              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Videos <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">One</a></li>
-                  <li><a href="#">Two</a></li>
-                  <li><a href="#">Three</a></li>
+				<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader2">Videos</span> <span class="caret"></span></a>
+                <ul class="dropdown-menu" id="menu2">
                 </ul>
               </li>
-              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interactivities <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">One</a></li>
-                  <li><a href="#">Two</a></li>
-                  <li><a href="#">Three</a></li>
+				<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader3">Interactivities</span> <span class="caret"></span></a>
+                <ul class="dropdown-menu" id="menu3">
+                </ul>
+              </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader4">Interactivities</span> <span class="caret"></span></a>
+                <ul class="dropdown-menu" id="menu4">
                 </ul>
               </li>
             </ul>
@@ -135,7 +130,7 @@
 
   
   <!-- Content Section -->
-  <div class ="PortSwap active" id="Content1"> 
+  <div class ="PortSwap" id="Content1"> 
     <!-- Add Padding to accomodate menu but hide in print-->
     <div class="row no-print" style="padding-top:45px;"></div>
     <div class="row"> 
