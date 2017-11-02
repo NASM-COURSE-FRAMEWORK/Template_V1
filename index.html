@@ -32,7 +32,6 @@
 
 <script type="text/javascript" src="SCORM_API_wrapper.js"></script>
 <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-
 <script>
 	//Declar Leaning Objective Number for use in JS File
 	var learningObjectiveNum = 1;
@@ -66,39 +65,49 @@
 				}
 
     </script>
-
 </head>
 <body>
 
 <!-- Menu System-->
 <div class="container-fluid" style="width:95%">
   <div class="row">
-    <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
-          </div>
-          <div class="collapse navbar-collapse navbar-menubuilder">
-            <ul class="nav navbar-nav">
-				<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader1">Learning Objectives</span> <span class="caret"></span></a>
-                <ul class="dropdown-menu" id="menu1">
-                </ul>
-              </li>
-				<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader2">Videos</span> <span class="caret"></span></a>
-                <ul class="dropdown-menu" id="menu2">
-                </ul>
-              </li>
-				<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader3">Interactivities</span> <span class="caret"></span></a>
-                <ul class="dropdown-menu" id="menu3">
-                </ul>
-              </li>
-              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader4">Interactivities</span> <span class="caret"></span></a>
-                <ul class="dropdown-menu" id="menu4">
-                </ul>
-              </li>
+    <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="http://www.nasm.org" target="new"><img style="	width: 125px;" src="img/nasm_logo.png" alt="NASM.ORG"> </a> </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader1">Learning Objectives</span> <span class="caret"></span></a>
+            <ul class="dropdown-menu" id="menu1">
             </ul>
-            <style>
+          </li>
+          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader2">Videos</span> <span class="caret"></span></a>
+            <ul class="dropdown-menu" id="menu2">
+            </ul>
+          </li>
+          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="menuHeader3">Interactivities</span> <span class="caret"></span></a>
+            <ul class="dropdown-menu" id="menu3">
+            </ul>
+          </li>
+        </ul>
+        <div class="col-sm-3 col-md-3">
+          <form class="navbar-form" role="search" style="margin-top:15px;">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="q">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+            </div>
+            <select class="selectpicker form-control" id="language">
+              <option value = "1" selected>English</option>
+              <option value = "2">Espaniol</option>
+            </select>
+          </form>
+        </div>
+        <style>
               .pagBlock { margin-right:15px; }
               .pagCol { display:inline-block;margin-right:-4px;vertical-align:middle;min-height:30px; }
               .pagCol a, .pagCol a span { font-size:18px; text-decoration:none; cursor:pointer; }
@@ -106,17 +115,16 @@
               .PortSwap { display:none; }
               .active { display:block; }
             </style>
-            <div class="pagBlock navbar-right">
-              <div class="pagCol"> <a id="arrowPrev" class="prevNextBtn" aria-label="Previous"> <span aria-hidden="true"><<</span> </a> </div>
-              <div class="pagCol pagColMain">
-                <ul class="pagination pagination-sm" id="mainPagination">
-                </ul>
-              </div>
-              <div class="pagCol"> <a id="arrowNext" class="prevNextBtn" aria-label="Next"> <span aria-hidden="true">>></span> </a> </div>
-            </div>
+        <div class="pagBlock navbar-right">
+          <div class="pagCol"> <a id="arrowPrev" class="prevNextBtn" aria-label="Previous"> <span aria-hidden="true"><<</span> </a> </div>
+          <div class="pagCol pagColMain">
+            <ul class="pagination pagination-sm" id="mainPagination">
+            </ul>
           </div>
+          <div class="pagCol"> <a id="arrowNext" class="prevNextBtn" aria-label="Next"> <span aria-hidden="true">>></span> </a> </div>
         </div>
       </div>
+      <!-- /.navbar-collapse --> 
     </div>
   </div>
 </div>
@@ -124,85 +132,84 @@
 
 <!-- Main Body -->
 <div class="container-fluid" style="width:85%;"> 
-
-<!-- Anything in selectable-conent class is able to be highlighted-->
-<div id="selectable-content"> 
-
   
-  <!-- Content Section -->
-  <div class ="PortSwap" id="Content1"> 
-    <!-- Add Padding to accomodate menu but hide in print-->
-    <div class="row no-print" style="padding-top:45px;"></div>
-    <div class="row"> 
-      <!-- Top Header and Page Toolbar-->
-      <div class="col-lg-7">
-        <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 2</div>
-      </div>
-    </div>
-    <!-- Default Row w/ Columns -->
-    <div class="row">
-      <div class="col-lg-9 col-md-9 col-sm-12">
-        <div class="left-section">
-          <div class="content-h3">The Prevalence of Obesity</div>
-          <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
-          <div class="content-h2">History of the Fitness Industry</div>
-          <div class="content-p"><a name="Obj1"></a>
-            <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world. </p>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
-            <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
-            <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
-          </div>
+  <!-- Anything in selectable-conent class is able to be highlighted-->
+  <div id="selectable-content"> 
+    
+    <!-- Content Section -->
+    <div class ="PortSwap" id="Content1"> 
+      <!-- Add Padding to accomodate menu but hide in print-->
+      <div class="row no-print" style="padding-top:45px;"></div>
+      <div class="row"> 
+        <!-- Top Header and Page Toolbar-->
+        <div class="col-lg-7">
+          <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 2</div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-3 col-sm-12">
-        <div class="right-section-bar1">Continuing Education</div>
-        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
-        <div class="right-section-bar1">Continuing Education</div>
-        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
-        <div class="right-section-boxhead1">TRAINER TIPS</div>
-        <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
-      </div>
-    </div>
-    <!-- Footer Row -->
-    <hr style="clear:both; visibility: hidden;">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="my-footer">Text </div>
-      </div>
-    </div>
-  </div>
-  <!-- Content Section -->
-  
-    <!-- Content Section -->
-  <div class ="PortSwap" id="Content2"> 
-    <!-- Add Padding to accomodate menu but hide in print-->
-    <div class="row no-print" style="padding-top:45px;"></div>
-    <div class="row"> 
-      <!-- Top Header and Page Toolbar-->
-      <div class="col-lg-9">
-        <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 1</div>
-      </div>
-    </div>
-    <!-- Main Content Row -->
-    <div class="row">
-      <div class="col-lg-9 col-md-9 col-sm-12">
-        <div class="left-section">
-          <div class="content-h3">The Prevalence of Obesity</div>
-          <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
-          <div class="content-h2">History of the Fitness Industry</div>
-          <div class="content-p">
-            <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</p>
-            <p>In the 1960s, women’s fitness centers, or “figure salons,” became a popular trend. Unlike male-oriented gyms, where the focus was on developing muscle size and strength, women’s fitness centers typically focused on weight loss and physique improvement. Instead of barbells and dumbbells, most exercise machines in women’s fitness centers were passive and focused on “spot reduction.” For example, a rolling machine was used to “roll away fat” or a mechanical </p>
+      <!-- Default Row w/ Columns -->
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12">
+          <div class="left-section">
+            <div class="content-h3">The Prevalence of Obesity</div>
+            <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
+            <div class="content-h2">History of the Fitness Industry</div>
+            <div class="content-p"><a name="Obj1"></a>
+              <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world. </p>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+              <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+              <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+            </div>
           </div>
-          <!--        <div class="printOnly" style="height:320px;"></div>-->
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-md-offset-2 col-md-8">
-              <!--  
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <div class="right-section-bar1">Continuing Education</div>
+          <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
+          <div class="right-section-bar1">Continuing Education</div>
+          <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
+          <div class="right-section-boxhead1">TRAINER TIPS</div>
+          <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
+        </div>
+      </div>
+      <!-- Footer Row -->
+      <hr style="clear:both; visibility: hidden;">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="my-footer">Text </div>
+        </div>
+      </div>
+    </div>
+    <!-- Content Section --> 
+    
+    <!-- Content Section -->
+    <div class ="PortSwap" id="Content2"> 
+      <!-- Add Padding to accomodate menu but hide in print-->
+      <div class="row no-print" style="padding-top:45px;"></div>
+      <div class="row"> 
+        <!-- Top Header and Page Toolbar-->
+        <div class="col-lg-9">
+          <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 1</div>
+        </div>
+      </div>
+      <!-- Main Content Row -->
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12">
+          <div class="left-section">
+            <div class="content-h3">The Prevalence of Obesity</div>
+            <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
+            <div class="content-h2">History of the Fitness Industry</div>
+            <div class="content-p">
+              <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</p>
+              <p>In the 1960s, women’s fitness centers, or “figure salons,” became a popular trend. Unlike male-oriented gyms, where the focus was on developing muscle size and strength, women’s fitness centers typically focused on weight loss and physique improvement. Instead of barbells and dumbbells, most exercise machines in women’s fitness centers were passive and focused on “spot reduction.” For example, a rolling machine was used to “roll away fat” or a mechanical </p>
+            </div>
+            <!--        <div class="printOnly" style="height:320px;"></div>-->
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-md-offset-2 col-md-8"> 
+                <!--  
                <div class="wrapper">
                 <div class="videocontent no-print">
                   <div class="p3sdk-container p3sdk-debug" player_id="video1" player_type="videojs">
@@ -232,141 +239,141 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
-              
+              </div> --> 
+                
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-12">
-        <div class="right-section-bar1">Continuing Education</div>
-        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
-        <div class="right-section-bar1">Continuing Education</div>
-        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
-        <div class="right-section-boxhead1">TRAINER TIPS</div>
-        <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
-      </div>
-    </div>
-    <!-- Footer Row -->
-    <hr style="clear:both; visibility: hidden;">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="my-footer">Text </div>
-      </div>
-    </div>
-  </div>
-  <!-- Content Section --> 
-  
-  <div class ="PortSwap no-print" id="Content3">
-    <div class="row" style="margin-top:50px;">
-      <div class="text-center col-md-offset-0 col-md-12 col-lg-offset-0 col-lg-12">
-        <div class="row">
-          <div class="col-lg-12 col-md-12">
-            <div class="interactivity-header">
-              <h1>Movement and Planes of Motion</h1>
-            </div>
-          </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <div class="right-section-bar1">Continuing Education</div>
+          <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
+          <div class="right-section-bar1">Continuing Education</div>
+          <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
+          <div class="right-section-boxhead1">TRAINER TIPS</div>
+          <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
         </div>
-        <div class="row"> 
-          <!--Row 2 Instructions--> 
+      </div>
+      <!-- Footer Row -->
+      <hr style="clear:both; visibility: hidden;">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="my-footer">Text </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-offset-0 col-sm-offset-0 col-md-6 col-xs-offset-0 col-xs-12 col-sm-12 col-lg-5 col-lg-offset-1 col-lg-push-5 col-md-push-6">
-        <div class="row" style="margin-top:50px;"></div>
-        <div class="col-centered col-max headers col-md-offset-0 col-sm-offset-0 col-sm-12 col-md-12 col-lg-offset-0 col-lg-12 col-xs-offset-0 col-xs-12">
+    <!-- Content Section -->
+    
+    <div class ="PortSwap no-print" id="Content3">
+      <div class="row" style="margin-top:50px;">
+        <div class="text-center col-md-offset-0 col-md-12 col-lg-offset-0 col-lg-12">
           <div class="row">
-            <div class="col-lg-12">
-              <div class="well">
-                <div class="questionText" style="margin-bottom:10px">
-                  <p>Match the movement to the plane of motion. </p>
-                  <br>
-                  <p>(A) Sagittal</p>
-                  <p>(B) Frontal</p>
-                  <p>(C) Transverse </p>
-                  <br>
-                  <br>
-                  <div id="rationale###" style="font-size:14px; font-weight:bold; margin-top:10px;"> </div>
+            <div class="col-lg-12 col-md-12">
+              <div class="interactivity-header">
+                <h1>Movement and Planes of Motion</h1>
+              </div>
+            </div>
+          </div>
+          <div class="row"> 
+            <!--Row 2 Instructions--> 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-0 col-sm-offset-0 col-md-6 col-xs-offset-0 col-xs-12 col-sm-12 col-lg-5 col-lg-offset-1 col-lg-push-5 col-md-push-6">
+          <div class="row" style="margin-top:50px;"></div>
+          <div class="col-centered col-max headers col-md-offset-0 col-sm-offset-0 col-sm-12 col-md-12 col-lg-offset-0 col-lg-12 col-xs-offset-0 col-xs-12">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="well">
+                  <div class="questionText" style="margin-bottom:10px">
+                    <p>Match the movement to the plane of motion. </p>
+                    <br>
+                    <p>(A) Sagittal</p>
+                    <p>(B) Frontal</p>
+                    <p>(C) Transverse </p>
+                    <br>
+                    <br>
+                    <div id="rationale###" style="font-size:14px; font-weight:bold; margin-top:10px;"> </div>
+                  </div>
+                </div>
+                <div id="quiz###" class="btn btn-two btn-block" style="max-width:200px;">
+                  <p>Submit</p>
                 </div>
               </div>
-              <div id="quiz###" class="btn btn-two btn-block" style="max-width:200px;">
-                <p>Submit</p>
-              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-xs-12 col-sm-12 col-lg-5 col-lg-offset-0 col-lg-pull-5 col-md-pull-6">
-        <div class="col-max headers col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-12 col-md-10 col-md-offset-1 col-lg-offset-0 col-lg-12">
-          <div class="row" style="margin-top:50px;"></div>
+        <div class="col-md-6 col-xs-12 col-sm-12 col-lg-5 col-lg-offset-0 col-lg-pull-5 col-md-pull-6">
+          <div class="col-max headers col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-12 col-md-10 col-md-offset-1 col-lg-offset-0 col-lg-12">
+            <div class="row" style="margin-top:50px;"></div>
+          </div>
+          <div class="col-md-offset-0 col-md-11 col-lg-offset-0 col-lg-12 col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12">
+            <div class="row" style="margin-bottom: 3px">
+              <div class="questionAnswers">
+                <div style="background-color:#f5f5f5; height: 25px;"> Biceps curl
+                  <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_1" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+                </div>
+                <br>
+                <div style="background-color:#f5f5f5; height: 25px;"> Squat
+                  <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_2" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+                </div>
+                <br>
+                <div style="background-color:#f5f5f5; height: 25px;"> Frontal plane lunge
+                  <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_3" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+                </div>
+                <br>
+                <div style="background-color:#f5f5f5; height: 25px;"> Squat jump
+                  <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_4" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+                </div>
+                <br>
+                <div style="background-color:#f5f5f5; height: 25px;"> Side lateral raise
+                  <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_5" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+                </div>
+                <br>
+                <div style="background-color:#f5f5f5; height: 25px;"> Transverse plane lunge
+                  <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_6" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+                </div>
+                <br>
+                <div style="background-color:#f5f5f5; height: 25px;"> Tubing side step
+                  <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_7" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+                </div>
+                <br>
+                <div style="background-color:#f5f5f5; height: 25px;"> Trunk rotation
+                  <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_8" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+                </div>
+                <br>
+                <div style="background-color:#f5f5f5; height: 25px;"> Throwing
+                  <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_9" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+                </div>
+                <br>
+                <div style="background-color:#f5f5f5; height: 25px;"> Swinging a bat
+                  <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_10" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+          <!-- Header Row --> 
+          <!-- Main Row --> 
         </div>
-        <div class="col-md-offset-0 col-md-11 col-lg-offset-0 col-lg-12 col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12">
-          <div class="row" style="margin-bottom: 3px">
-            <div class="questionAnswers">
-              <div style="background-color:#f5f5f5; height: 25px;"> Biceps curl
-                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_1" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-              </div>
-              <br>
-              <div style="background-color:#f5f5f5; height: 25px;"> Squat
-                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_2" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-              </div>
-              <br>
-              <div style="background-color:#f5f5f5; height: 25px;"> Frontal plane lunge
-                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_3" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-              </div>
-              <br>
-              <div style="background-color:#f5f5f5; height: 25px;"> Squat jump
-                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_4" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-              </div>
-              <br>
-              <div style="background-color:#f5f5f5; height: 25px;"> Side lateral raise
-                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_5" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-              </div>
-              <br>
-              <div style="background-color:#f5f5f5; height: 25px;"> Transverse plane lunge
-                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_6" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-              </div>
-              <br>
-              <div style="background-color:#f5f5f5; height: 25px;"> Tubing side step
-                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_7" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-              </div>
-              <br>
-              <div style="background-color:#f5f5f5; height: 25px;"> Trunk rotation
-                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_8" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-              </div>
-              <br>
-              <div style="background-color:#f5f5f5; height: 25px;"> Throwing
-                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_9" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-              </div>
-              <br>
-              <div style="background-color:#f5f5f5; height: 25px;"> Swinging a bat
-                <input type="text" onkeyup="caps(this)" name="1" id= "quiz1_10" value="" maxlength="1" size="1" style="float:right; margin-right:55%;">
-              </div>
-              <br>
+        <div class="col-lg-offset-0 col-sm-offset-0 col-md-offset-0 col-sm-12 col-lg-12 col-md-12 col-xs-offset-0 col-xs-12">
+          <div class="row" style="margin-top:50px">
+            <div class="headers col-md-offset-0 col-sm-offset-0 col-lg-offset-1 col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <button style="display:none;" id="quiz###_prev" class="btn btn-one btn-block" onClick="prevBtn()">
+              <p>Previous</p>
+              </button>
+            </div>
+            <div class="headers col-lg-2 col-lg-offset-6 col-md-3 col-md-offset-6 col-sm-4 col-sm-offset-4 col-xs-6">
+              <button style="display:none;" id="quiz###_next" class="btn btn-one btn-block"  onClick="nextBtn()">
+              <p>Next</p>
+              </button>
             </div>
           </div>
         </div>
-        <!-- Header Row --> 
-        <!-- Main Row --> 
-      </div>
-      <div class="col-lg-offset-0 col-sm-offset-0 col-md-offset-0 col-sm-12 col-lg-12 col-md-12 col-xs-offset-0 col-xs-12">
-        <div class="row" style="margin-top:50px">
-          <div class="headers col-md-offset-0 col-sm-offset-0 col-lg-offset-1 col-lg-2 col-md-3 col-sm-4 col-xs-6">
-            <button style="display:none;" id="quiz###_prev" class="btn btn-one btn-block" onClick="prevBtn()">
-            <p>Previous</p>
-            </button>
-          </div>
-          <div class="headers col-lg-2 col-lg-offset-6 col-md-3 col-md-offset-6 col-sm-4 col-sm-offset-4 col-xs-6">
-            <button style="display:none;" id="quiz###_next" class="btn btn-one btn-block"  onClick="nextBtn()">
-            <p>Next</p>
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <!--  Interactivity JavaScript--> 
-      <script>
+        
+        <!--  Interactivity JavaScript-->
+        <script>
     var numTries = 0;
     $( "#quiz1" ).click(function() {
     	numTries = numTries +1;
@@ -415,67 +422,66 @@
     		function caps(element){
         element.value = element.value.toUpperCase();
     }
-</script> 
+</script>
+      </div>
+      
+      <!-- Content Section --> 
+      
     </div>
+    <!-- Content Section --> 
     
+    <!-- Content Section -->
+    <div class ="PortSwap" id="Content4"> 
+      <!-- Add Padding to accomodate menu but hide in print-->
+      <div class="row no-print" style="padding-top:45px;"></div>
+      <div class="row"> 
+        <!-- Top Header and Page Toolbar-->
+        <div class="col-lg-7">
+          <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 2</div>
+        </div>
+      </div>
+      <!-- Default Row w/ Columns -->
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12">
+          <div class="left-section">
+            <div class="content-h3">The Prevalence of Obesity</div>
+            <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
+            <div class="content-h2">History of the Fitness Industry</div>
+            <div class="content-p"><a name="Obj1"></a>
+              <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world. </p>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+              <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+              <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <div class="right-section-bar1">Continuing Education</div>
+          <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
+          <div class="right-section-bar1">Continuing Education</div>
+          <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
+          <div class="right-section-boxhead1">TRAINER TIPS</div>
+          <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
+        </div>
+      </div>
+      <!-- Footer Row -->
+      <hr style="clear:both; visibility: hidden;">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="my-footer">Text </div>
+        </div>
+      </div>
+    </div>
     <!-- Content Section --> 
     
   </div>
-  <!-- Content Section --> 
-
-  <!-- Content Section -->
-  <div class ="PortSwap" id="Content4"> 
-    <!-- Add Padding to accomodate menu but hide in print-->
-    <div class="row no-print" style="padding-top:45px;"></div>
-    <div class="row"> 
-      <!-- Top Header and Page Toolbar-->
-      <div class="col-lg-7">
-        <div class="page-header"><span style="color:#214066; font-weight:bold;">Chapter 1</span> | Career Direction in Sport, Health, and Fitness - CONTENT 2</div>
-      </div>
-    </div>
-    <!-- Default Row w/ Columns -->
-    <div class="row">
-      <div class="col-lg-9 col-md-9 col-sm-12">
-        <div class="left-section">
-          <div class="content-h3">The Prevalence of Obesity</div>
-          <div class="content-p">Being overweight or obese creates a predisposition to major health risk factors such as hyper-tension, hyperlipidemia, and type 2 diabetes, and is a leading determinant for increased levels of inactivity for an affected individual. Obesity is the condition of being considerably over-weight, and refers to a person with a body mass index (BMI) of 30 or higher or who is at least 30 pounds over the recommended weight for their height (Must et al., 1999). It is a complex condition that increases the risk of death from chronic diseases and is a major cause of prevent-able death (Centers for Disease Control and Prevention [CDC], 2016). In the United States, the occurrence of obesity in the population varies by state and territory. As of 2014, no U.S. state had a prevalence of obesity below 20%, and in three states 35% or more of the populations fell into this high-risk category (CDC, 2014). Overall, the rate of obesity in the United States is high, with approximately one-third of adults and one-fifth of children being classified as obese (Ogden, Kit, & Flegal, 2014).</div>
-          <div class="content-h2">History of the Fitness Industry</div>
-          <div class="content-p"><a name="Obj1"></a>
-            <p>In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world. </p>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
-            <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-lg-offset-2 col-sm-6 col-md-4 col-md-offset-2"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
-            <div class="col-lg-4 col-lg-offset-0 col-sm-6 col-md-4"> <img src="img/1.jpg" class="img-responsive" alt="Placeholder image"> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-12">
-        <div class="right-section-bar1">Continuing Education</div>
-        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
-        <div class="right-section-bar1">Continuing Education</div>
-        <div class="content-cop">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</div>
-        <div class="right-section-boxhead1">TRAINER TIPS</div>
-        <div class="right-section-box-content1">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</div>
-      </div>
-    </div>
-    <!-- Footer Row -->
-    <hr style="clear:both; visibility: hidden;">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="my-footer">Text </div>
-      </div>
-    </div>
-  </div>
-  <!-- Content Section -->
-  
 </div>
-		
-</div>
-<!-- Main Body -->
+<!-- Main Body --> 
 
 <!-- Footer Row -->
 <hr style="clear:both; visibility: hidden;">
@@ -500,21 +506,11 @@
 </div>
 <!-- Footer Row -->
 
-<script>
-	//This Script will figure out how many content pages there are and
-	//Store that number into localStorage to be pulled in the Scripts.JS file
-	var numPages = $('.PortSwap').length;
-	if (typeof(Storage) !== "undefined") {
-    localStorage.setItem("myNumPages", numPages);
-} else {
-    // Sorry! No Web Storage support..
-}
-</script>
 
-<!-- Video Player JS --> 
-<script src="js/video.js"></script> 
-<script src="js/videojs-resolution-switcher.js"></script> 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<!-- Video Player JS -->
+<script src="js/video.js"></script>
+<script src="js/videojs-resolution-switcher.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
