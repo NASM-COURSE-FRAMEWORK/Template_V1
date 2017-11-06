@@ -3,29 +3,91 @@
   <settings>
     <item id="0-lesson_start_progress">0</item>
     <item id="1-chapter-pages-number">30</item>
-    <item id="2-number-of-chapters">16</item>
-    <item id="3-course-page-id">c01ch01l01</item>
+    <item id="2-total-pages">495</item>
+    <item id="3-course-id">c01</item>
+    <item id="4-chapter-id">ch01</item>
+    <item id="5-lesson-id">l01</item>
+    <item id="6-lesson-title">
+      <![CDATA[<span style="font-weight:bold;">]]>
+      LESSON 1
+      <![CDATA[</span>]]>
+      | History of the Fitness Industry</item>
+    <item id="7-chapter-title">
+      <![CDATA[<span style="color:#00a7df; font-weight:bold;">]]>
+      CHAPTER 1
+      <![CDATA[</span>]]>
+      | Introduction to the Fitness Profession<![CDATA[<div class="timestamp no-print" style="float:right">]]><![CDATA[</div>]]></item>
+	  <item id="8-lesson-progress-text">Lesson Progress: </item>
+	  <item id="9-chapter-progress-text">Chapter Progress: </item>
+	  <item id="10-course-progress-text">Course Progress: </item>
   </settings>
   <content>
     <headers>
-      <item id="0">Header 0</item>
-      <item id="1">Header 1</item>
-      <item id="2">Header 2</item>
-      <item id="3">Header 3</item>
-      <item id="4">Header 4</item>
+      <item id="0">Welcome to the Fitness Industry</item>
+      <item id="1">The Modern State of Health and Fitness</item>
+      <item id="2">The Prevalence of Obesity</item>
+      <item id="3">History of the Fitness Industry</item>
+      <item id="4">The Role of the Fitness Professional</item>
+      <item id="5">Evolution of the Fitness Professional</item>
+      <item id="6">Welcome to NASM</item>
+      <item id="7">The NASM Certified Personal Trainer Certification</item>
+      <item id="8">Evidence-Based Practice</item>
+      <item id="9">Integrated Training and the OPT Model</item>
+      <item id="10">Postural Assessments</item>
+      <item id="11">Career Opportunities for the Fitness Professional</item>
     </headers>
     <paragraphs>
-      <item id="0">INSERT CONTENT 0</item>
-      <item id="1">INSERT CONTENT 1</item>
-      <item id="2">INSERT CONTENT 2</item>
-      <item id="3">INSERT CONTENT 3</item>
-      <item id="4">INSERT CONTENT 4</item>
-      <item id="5">INSERT CONTENT 5</item>
-      <item id="6">INSERT CONTENT 6</item>
-      <item id="7">INSERT CONTENT 7</item>
-      <item id="8">INSERT CONTENT 8</item>
+      <item id="0">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.
+        <![CDATA[<br>]]>
+        <![CDATA[]]>
+        <![CDATA[<span style="margin-left:25px">]]>
+        The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.
+        <![CDATA[</span>]]>
+      </item>
+      <item id="1">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="2">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="3">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="4">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="5">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="6">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="7">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="8">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="8">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="8">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="8">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="8">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="8">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="8">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
+      <item id="8">In the 1950s, health clubs consisted of bodybuilders, power lifters, Olympic lifters, and athletes. It was a male-dominated environment in which men trained with free weights to increase mus-cle size and strength. Then, in 1951 Jack LaLanne began hosting America’s first televised fitness show, The Jack LaLanne Show, which aired until 1984. Jack’s workouts consisted mainly of cal-isthenics intermixed with tips on counting calories, weight training, and nutrition. Yet before pioneering a TV show, at the age of 21 Jack LaLanne opened his first health club in Oakland, California, in 1936 where he invented the cable pulley weight training system and the Smith weightlifting machine. Today, both of these implements are still actively used in most fitness centers around the world.</item>
     </paragraphs>
+      <callouts>
+    <item id="1">Learn More <![CDATA[<span class="glyphicon glyphicon-plus my-glyph-black" style="float:right; margin-right: 10px;">]]><![CDATA[</span>]]></item>
+    <item id="2">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</item>
+    <item id="3">Continuing Education  <![CDATA[<span class="glyphicon glyphicon-plus my-glyph-black" style="float:right; margin-right: 10px;">]]><![CDATA[</span>]]></item>
+    <item id="4">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</item>
+    <item id="5">TRAINER TIPS  <![CDATA[<span class="glyphicon glyphicon-plus my-glyph-white" style="float:right; margin-right: 10px;">]]><![CDATA[</span>]]></item>
+    <item id="6">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</item>
+    <item id="1">Continuing Education</item>
+    <item id="2">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</item>
+    <item id="3">Continuing Education</item>
+    <item id="4">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</item>
+    <item id="5">TRAINER TIPS</item>
+    <item id="6">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</item>
+    <item id="1">Continuing Education</item>
+    <item id="2">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</item>
+    <item id="3">Continuing Education</item>
+    <item id="4">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</item>
+    <item id="5">TRAINER TIPS</item>
+    <item id="6">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</item>
+    <item id="1">Continuing Education</item>
+    <item id="2">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</item>
+    <item id="3">Continuing Education</item>
+    <item id="4">Any variety of course offerings that serve the purpose to keeeping profesionals up-to-date with their knowledge and skills.</item>
+    <item id="5">TRAINER TIPS</item>
+    <item id="6">Make sure to frequently visit the NASM.org website for the most up-to-date recertification require-ments and continuing education options.</item>
+  </callouts>
   </content>
+
   <tables>
     <table desc="Table5x3">
       <item desc="Header">Header 1</item>
