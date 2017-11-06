@@ -3,19 +3,19 @@
 Things to work on:
 
 JAVASCRIPT
-1. Pagination Function (IN PROGRESS)
+1. Pagination Function (COMPLETE)
 -Update Content Block Divs to be unique ID's for search function and to open ID when browser is closed.
 -Ensure Progress bar updates only once when a content div is loaded.  Perhaps use an array and track if a div is opened.
 -Store unqiue content div into local storage and upon reopen launch the last loaded content div.  Like a bookmarking feature.
 - Unique ID's should be in this format - 01ch01l01p01
 - the first two digits represent the course number.  CPT = 01, PES = 02, CES - 03, etc.  Since these are stored in local storage they need to be unique in case user has multiple courses
 
-2. XML Import function
+2. XML Import function (IN PROGRESS)
 - Go over all the different nodes required.  We want to use one data.xml with a unique file name since we will be sending these to partners for translation.  File naming convention = 01ch01data.xml  Where 01 represents the course number.
 - We will need to import all content, interactivity content, table content, etc.  The quiz will be imported in a separate XML file with the file name convention of 01ch01quiz.xml
 - Need to build function and HTML for switching the language packs upon user request.
 
-3. Progress Bar function (IN PROGRESS)
+3. Progress Bar function (COMPLETE)
 - Need to update progress bar function to have a unique variable stored in the HTML file to represent the learning objective number.  We will have multiple learning objective files in each scorm package that all share the same scripts.js file and therefore we need to store the learning objective number in the HTML file and not the JS file.  We can update the JS file with a serieis of if statements to make sure the correct ID's are stored in local storage.
 -Need to update all unqiue ID's for local storage so that they are unique to each course so they don't overlap.  File naming convention is 01ch01l01 for lessons. 01ch01 for chapters. 01c01 for courses.
 -Need to figure out how to differentiate learning objective html files eventhough they are using the same scripts.js file.  Perhaps move all progress bar code to local HTML file.
@@ -35,7 +35,7 @@ JAVASCRIPT
 - Create progress bars for each chapter displayed above each button using the local storage variables.
 - Create an image rotator with exercise images and perhaps adds.
 
-8. Quiz Function
+8. Quiz Function (COMPLETE)
 - Develop new HTML template with a quiz function.
 - Quiz should use XML to import text and answers from existing moodle XML files.  That way we do not need to rewrite all quiz items.
 - Develop CSS styles and media queries to make quiz look nice.
